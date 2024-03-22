@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RoomTracker : MonoBehaviour
 {
-    public string isInRoom;
+    public float isInRoom;
     // Start is called before the first frame update
     void Start()
     {
