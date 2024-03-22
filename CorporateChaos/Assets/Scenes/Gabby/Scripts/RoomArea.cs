@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class RoomArea : MonoBehaviour
@@ -9,7 +10,7 @@ public class RoomArea : MonoBehaviour
     public GameObject exitPointIncrease;
     public GameObject exitPointDecrease;
     public GameObject exitPointSpecial1;
-    public GameObject exitPointSouthSpecial2;
+    public GameObject exitPointSpecial2;
     public float roomNum;
     public void OnTriggerEnter2D(Collider2D collision)
     {
@@ -19,6 +20,7 @@ public class RoomArea : MonoBehaviour
         }
         else if (collision.gameObject.tag == "Enemy")
         {
+            enemy.GetComponent<Chase>().isInRoom = this.gameObject;
             enemy.GetComponent<RoomTracker>().isInRoom = roomNum;
         }
     }

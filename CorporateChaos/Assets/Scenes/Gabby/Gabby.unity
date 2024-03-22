@@ -185,7 +185,7 @@ MonoBehaviour:
   exitPointIncrease: {fileID: 792231995}
   exitPointDecrease: {fileID: 99001974}
   exitPointSpecial1: {fileID: 0}
-  exitPointSouthSpecial2: {fileID: 0}
+  exitPointSpecial2: {fileID: 0}
   roomNum: 3
 --- !u!212 &14481473
 SpriteRenderer:
@@ -247,8 +247,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 14481470}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.6908, y: -8.8871, z: 0}
-  m_LocalScale: {x: 15.632559, y: 3.5136995, z: 1}
+  m_LocalPosition: {x: -0.6908, y: -8.9331, z: 0}
+  m_LocalScale: {x: 15.632559, y: 3.4216115, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -746,7 +746,7 @@ MonoBehaviour:
   exitPointIncrease: {fileID: 213401597}
   exitPointDecrease: {fileID: 213401597}
   exitPointSpecial1: {fileID: 0}
-  exitPointSouthSpecial2: {fileID: 0}
+  exitPointSpecial2: {fileID: 0}
   roomNum: 6
 --- !u!212 &211853753
 SpriteRenderer:
@@ -978,143 +978,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1294764663}
   m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &225048926
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 225048931}
-  - component: {fileID: 225048930}
-  - component: {fileID: 225048929}
-  - component: {fileID: 225048928}
-  - component: {fileID: 225048927}
-  m_Layer: 0
-  m_Name: Passive Robot (2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &225048927
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 225048926}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98c135b7c61b04c40842349886100799, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 15
---- !u!50 &225048928
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 225048926}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 2
-  m_LinearDrag: 1
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!70 &225048929
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 225048926}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1, y: 2}
-  m_Direction: 0
---- !u!212 &225048930
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 225048926}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
-  m_Color: {r: 0.17895675, g: 1, b: 0, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1, y: 2}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!4 &225048931
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 225048926}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.53, y: -10.25, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &243890680
 GameObject:
@@ -1794,7 +1657,7 @@ MonoBehaviour:
   exitPointIncrease: {fileID: 99001974}
   exitPointDecrease: {fileID: 2114079237}
   exitPointSpecial1: {fileID: 0}
-  exitPointSouthSpecial2: {fileID: 0}
+  exitPointSpecial2: {fileID: 0}
   roomNum: 2
 --- !u!212 &523453415
 SpriteRenderer:
@@ -2457,7 +2320,7 @@ MonoBehaviour:
   exitPointIncrease: {fileID: 2114079237}
   exitPointDecrease: {fileID: 0}
   exitPointSpecial1: {fileID: 0}
-  exitPointSouthSpecial2: {fileID: 0}
+  exitPointSpecial2: {fileID: 0}
   roomNum: 1
 --- !u!212 &717374328
 SpriteRenderer:
@@ -2721,7 +2584,7 @@ MonoBehaviour:
   exitPointIncrease: {fileID: 1393508221}
   exitPointDecrease: {fileID: 792231995}
   exitPointSpecial1: {fileID: 1655835719}
-  exitPointSouthSpecial2: {fileID: 1862439868}
+  exitPointSpecial2: {fileID: 1862439868}
   roomNum: 4
 --- !u!212 &738862987
 SpriteRenderer:
@@ -3149,7 +3012,7 @@ MonoBehaviour:
   exitPointIncrease: {fileID: 1862439868}
   exitPointDecrease: {fileID: 1862439868}
   exitPointSpecial1: {fileID: 0}
-  exitPointSouthSpecial2: {fileID: 0}
+  exitPointSpecial2: {fileID: 0}
   roomNum: 3.5
 --- !u!212 &839753611
 SpriteRenderer:
@@ -3413,7 +3276,7 @@ MonoBehaviour:
   exitPointIncrease: {fileID: 213401597}
   exitPointDecrease: {fileID: 1393508221}
   exitPointSpecial1: {fileID: 0}
-  exitPointSouthSpecial2: {fileID: 0}
+  exitPointSpecial2: {fileID: 0}
   roomNum: 5
 --- !u!212 &1000944733
 SpriteRenderer:
@@ -3544,7 +3407,7 @@ MonoBehaviour:
   exitPointIncrease: {fileID: 1655835719}
   exitPointDecrease: {fileID: 1655835719}
   exitPointSpecial1: {fileID: 0}
-  exitPointSouthSpecial2: {fileID: 0}
+  exitPointSpecial2: {fileID: 0}
   roomNum: 3.25
 --- !u!212 &1124350020
 SpriteRenderer:
@@ -3731,7 +3594,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1143517311}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.57, y: 2.39, z: 0}
+  m_LocalPosition: {x: -32.06, y: -9.83, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3909,9 +3772,10 @@ GameObject:
   - component: {fileID: 1185200968}
   - component: {fileID: 1185200967}
   - component: {fileID: 1185200970}
+  - component: {fileID: 1185200971}
   m_Layer: 0
   m_Name: WallSensorRight
-  m_TagString: Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3981,6 +3845,58 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isTouchingWall: 0
+--- !u!212 &1185200971
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1185200965}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.2, y: 0.2}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &1264637275
 GameObject:
   m_ObjectHideFlags: 0
@@ -4128,7 +4044,7 @@ GameObject:
   - component: {fileID: 1279777933}
   m_Layer: 0
   m_Name: WallSensorDown
-  m_TagString: Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4558,143 +4474,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1424025337
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1424025342}
-  - component: {fileID: 1424025341}
-  - component: {fileID: 1424025340}
-  - component: {fileID: 1424025339}
-  - component: {fileID: 1424025338}
-  m_Layer: 0
-  m_Name: Passive Robot (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1424025338
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1424025337}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98c135b7c61b04c40842349886100799, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 15
---- !u!50 &1424025339
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1424025337}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 2
-  m_LinearDrag: 1
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!70 &1424025340
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1424025337}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1, y: 2}
-  m_Direction: 0
---- !u!212 &1424025341
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1424025337}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
-  m_Color: {r: 0.17895675, g: 1, b: 0, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1, y: 2}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!4 &1424025342
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1424025337}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 21.37, y: -5.56, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 25
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1465671632
 GameObject:
   m_ObjectHideFlags: 0
@@ -4890,7 +4669,7 @@ MonoBehaviour:
   exitPointIncrease: {fileID: 213401597}
   exitPointDecrease: {fileID: 1393508221}
   exitPointSpecial1: {fileID: 0}
-  exitPointSouthSpecial2: {fileID: 0}
+  exitPointSpecial2: {fileID: 0}
   roomNum: 5
 --- !u!212 &1469521618
 SpriteRenderer:
@@ -5287,7 +5066,7 @@ MonoBehaviour:
   exitPointIncrease: {fileID: 1393508221}
   exitPointDecrease: {fileID: 792231995}
   exitPointSpecial1: {fileID: 1655835719}
-  exitPointSouthSpecial2: {fileID: 1862439868}
+  exitPointSpecial2: {fileID: 1862439868}
   roomNum: 4
 --- !u!212 &1593040314
 SpriteRenderer:
@@ -5349,8 +5128,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1593040311}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.1021, y: -1.2511, z: 0}
-  m_LocalScale: {x: 28.957134, y: 12.022745, z: 1}
+  m_LocalPosition: {x: -7.1021, y: -1.2163, z: 0}
+  m_LocalScale: {x: 28.957134, y: 11.953633, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -5474,7 +5253,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1609289853}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -33.82, y: -26.94, z: 0}
+  m_LocalPosition: {x: 0.07, y: -17.39, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5515,8 +5294,9 @@ MonoBehaviour:
   rightSensor: {fileID: 1185200965}
   upSensor: {fileID: 1691411360}
   downSensor: {fileID: 1279777928}
-  isInRoom: 0
+  isInRoom: {fileID: 717374325}
   targetInRoom: 0
+  speed: 3.5
 --- !u!1 &1609378768
 GameObject:
   m_ObjectHideFlags: 0
@@ -5579,7 +5359,7 @@ MonoBehaviour:
   exitPointIncrease: {fileID: 99001974}
   exitPointDecrease: {fileID: 2114079237}
   exitPointSpecial1: {fileID: 0}
-  exitPointSouthSpecial2: {fileID: 0}
+  exitPointSpecial2: {fileID: 0}
   roomNum: 2
 --- !u!212 &1609378771
 SpriteRenderer:
@@ -5874,7 +5654,7 @@ MonoBehaviour:
   exitPointIncrease: {fileID: 792231995}
   exitPointDecrease: {fileID: 99001974}
   exitPointSpecial1: {fileID: 0}
-  exitPointSouthSpecial2: {fileID: 0}
+  exitPointSpecial2: {fileID: 0}
   roomNum: 3
 --- !u!212 &1660427863
 SpriteRenderer:
@@ -6227,7 +6007,7 @@ GameObject:
   - component: {fileID: 1691411365}
   m_Layer: 0
   m_Name: WallSensorUp
-  m_TagString: Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6492,7 +6272,7 @@ MonoBehaviour:
   exitPointIncrease: {fileID: 213401597}
   exitPointDecrease: {fileID: 1393508221}
   exitPointSpecial1: {fileID: 0}
-  exitPointSouthSpecial2: {fileID: 0}
+  exitPointSpecial2: {fileID: 0}
   roomNum: 5
 --- !u!212 &1735573828
 SpriteRenderer:
@@ -6974,7 +6754,7 @@ GameObject:
   - component: {fileID: 1833866301}
   m_Layer: 0
   m_Name: WallSensorLeft
-  m_TagString: Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

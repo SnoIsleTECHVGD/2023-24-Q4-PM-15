@@ -6,6 +6,7 @@ public class WallSensing : MonoBehaviour
 {
     public bool isTouchingWall;
 
+
     public void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Wall")

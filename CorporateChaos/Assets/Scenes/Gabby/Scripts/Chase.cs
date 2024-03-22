@@ -12,30 +12,79 @@ public class Chase : MonoBehaviour
     public GameObject rightSensor;
     public GameObject upSensor;
     public GameObject downSensor;
-
-    public float isInRoom;
+    public GameObject isInRoom;
+    
     public float targetInRoom;
+    public float speed;
 
     // Update is called once per frame
     void Update()
     {
-        this.isInRoom = this.GetComponent<RoomTracker>().isInRoom;
         targetInRoom = target.GetComponent<RoomTracker>().isInRoom;
 
-        StartCoroutine(chase(target));
+        chase(selectTarget());
     }
 
-    public IEnumerator chase(GameObject target)
+    public void chase(GameObject target)
     {
         float vectorX = target.transform.position.x - transform.position.x;
         float vectorY = target.transform.position.y - transform.position.y;
+
+        if (rightSensor.GetComponent<WallSensing>().isTouchingWall && vectorX > 0)
+        {
+            vectorX = 0;
+        }
+        if (leftSensor.GetComponent<WallSensing>().isTouchingWall && vectorX < 0)
+        {
+            vectorX = 0;
+        }
+        if (upSensor.GetComponent<WallSensing>().isTouchingWall && vectorY > 0)
+        {
+            vectorY = 0;
+        } 
+        if (downSensor.GetComponent<WallSensing>().isTouchingWall && vectorY < 0)
+        {
+            vectorY = 0;
+        }
+        if ((rightSensor.GetComponent<WallSensing>().isTouchingWall || leftSensor.GetComponent<WallSensing>().isTouchingWall) && upSensor.GetComponent<WallSensing>().isTouchingWall)
+        {
+            vectorY = -1;
+        }
+        if ((rightSensor.GetComponent<WallSensing>().isTouchingWall || leftSensor.GetComponent<WallSensing>().isTouchingWall) && downSensor.GetComponent<WallSensing>().isTouchingWall)
+        {
+            vectorY = 1;
+        }
 
         Vector3 toTarget = new Vector3(vectorX, vectorY, 0);
         toTarget = Vector3.Normalize(toTarget);
         if (target.transform.position.x != transform.position.x && target.transform.position.y != transform.position.y)
         {
-            yield return new WaitForSeconds(100);
-            transform.Translate(toTarget);
+            transform.Translate(toTarget * Time.deltaTime * speed);
+        }
+    }
+
+    public GameObject selectTarget()
+    {
+        if (targetInRoom > this.GetComponent<RoomTracker>().isInRoom)
+        {
+            return isInRoom.GetComponent<RoomArea>().exitPointIncrease;
+        }
+        else if (targetInRoom == this.GetComponent<RoomTracker>().isInRoom)
+        {
+            return target;
+        }
+        else if (targetInRoom == 3.25f && this.GetComponent<RoomTracker>().isInRoom == 4)
+        {
+            return isInRoom.GetComponent<RoomArea>().exitPointSpecial1;
+        }
+        else if (targetInRoom == 3.5f && this.GetComponent<RoomTracker>().isInRoom == 4)
+        {
+            return isInRoom.GetComponent<RoomArea>().exitPointSpecial2;
+        }
+        else
+        {
+            //assume target room number is less than this room number
+            return isInRoom.GetComponent<RoomArea>().exitPointDecrease;
         }
     }
 }
