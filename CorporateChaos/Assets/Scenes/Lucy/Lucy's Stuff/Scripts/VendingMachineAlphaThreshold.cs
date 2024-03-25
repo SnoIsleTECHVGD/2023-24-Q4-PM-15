@@ -5,11 +5,11 @@ using UnityEngine.UI;
 
 public class VendingMachineAlphaThreshold : MonoBehaviour
 {
-    private Image vendingmachineImage;
+    private Image FoodGiver;
 
     private void Awake()
     {
-        vendingmachineImage = GetComponent<Image>();
-        vendingmachineImage.alphaHitTestMinimumThreshold = 0.001f;
+        FoodGiver = GetComponent<Image>();
+        FoodGiver.alphaHitTestMinimumThreshold = 0.001f;
     }
 }

@@ -1,5 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
+using System.Threading.Tasks;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class VendingMachine : MonoBehaviour
@@ -8,15 +11,17 @@ public class VendingMachine : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
+            StartCoroutine(Size());
+
             IncreaseKick();
-       
         }    
        
 
     }
+
     public GameObject Machinekick;
     public double CurrentKickCount { get; set; }
-    private GameObject FoodGiver;
+    public GameObject FoodGiver;
 
 public void OnMachinekick()
     {
@@ -28,4 +33,14 @@ public void OnMachinekick()
         CurrentKickCount += 1;
         print(CurrentKickCount);
     }
+    
+    public IEnumerator Size()
+    {
+        RectTransform rectTransform = GetComponent<RectTransform>();
+        rectTransform.Rotate(new Vector3(0, 0, 3));
+        FoodGiver.transform.localScale = new Vector3(1f, 1f, 1f);
+        yield return new WaitForSeconds(.3f);
+        FoodGiver.transform.localScale = new Vector3(.5f, .5f, .5f);
+    }
+     
 }
