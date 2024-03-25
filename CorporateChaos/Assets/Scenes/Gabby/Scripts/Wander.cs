@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
+using UnityEngine.InputSystem;
 
 public class Wander : MonoBehaviour
 {
@@ -14,9 +16,8 @@ public class Wander : MonoBehaviour
     }
     async void Update()
     {
-        Vector3[] moveDirections = { Vector3.left, Vector3.up,Vector3.down, Vector3.zero, Vector3.zero, Vector3.right};
-        transform.Translate(moveDirections[Mathf.FloorToInt(Random.Range(0, 6))] * Time.deltaTime * speed);
-
+        Vector3[] moveDirections = { Vector3.left, Vector3.up,Vector3.down, Vector3.right};
+        transform.Translate(moveDirections[Mathf.FloorToInt(Random.Range(0, 4))] * Time.deltaTime * speed);
     }
 
 
