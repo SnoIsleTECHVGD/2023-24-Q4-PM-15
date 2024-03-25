@@ -12,7 +12,6 @@ public class WallSensing : MonoBehaviour
         if (collision.gameObject.tag == "Wall")
         {
             isTouchingWall = true;
-            Debug.Log("A sensor is touching a wall");
         }
     }
 
@@ -21,7 +20,6 @@ public class WallSensing : MonoBehaviour
         if (collision.gameObject.tag == "Wall")
         {
             isTouchingWall = true;
-            Debug.Log("A sensor is touching a wall");
         }
     }
 
@@ -30,7 +28,6 @@ public class WallSensing : MonoBehaviour
         if (collision.gameObject.tag == "Wall")
         {
             isTouchingWall = false;
-            Debug.Log("A sensor is touching nothing");
         }
     }
 }

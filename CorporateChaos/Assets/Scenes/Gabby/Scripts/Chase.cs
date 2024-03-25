@@ -13,6 +13,7 @@ public class Chase : MonoBehaviour
     public GameObject upSensor;
     public GameObject downSensor;
     public GameObject isInRoom;
+    public GameObject gameOverScreen;
     
     public float targetInRoom;
     public float speed;
@@ -20,9 +21,13 @@ public class Chase : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        targetInRoom = target.GetComponent<RoomTracker>().isInRoom;
 
-        chase(selectTarget());
+        if (!(target is null))
+        {
+            targetInRoom = target.GetComponent<RoomTracker>().isInRoom;
+            chase(selectTarget());
+        }
+        
     }
 
     public void chase(GameObject target)
@@ -32,19 +37,47 @@ public class Chase : MonoBehaviour
 
         if (rightSensor.GetComponent<WallSensing>().isTouchingWall && vectorX > 0)
         {
-            vectorX = 0;
+            if (leftSensor.GetComponent<WallSensing>().isTouchingWall == false)
+            {
+                vectorX = -1;
+            }
+            else
+            {
+                vectorX = 0;
+            }
         }
         if (leftSensor.GetComponent<WallSensing>().isTouchingWall && vectorX < 0)
         {
-            vectorX = 0;
+            if (rightSensor.GetComponent<WallSensing>().isTouchingWall == false)
+            {
+                vectorX = 1;
+            }
+            else
+            {
+                vectorX = 0;
+            }
         }
         if (upSensor.GetComponent<WallSensing>().isTouchingWall && vectorY > 0)
         {
-            vectorY = 0;
+            if (downSensor.GetComponent<WallSensing>().isTouchingWall == false)
+            {
+                vectorY = -1;
+            }
+            else
+            {
+                vectorY = 0;
+            }
         } 
         if (downSensor.GetComponent<WallSensing>().isTouchingWall && vectorY < 0)
         {
-            vectorY = 0;
+            if (upSensor.GetComponent<WallSensing>().isTouchingWall == false)
+            {
+                vectorY = 1;
+            }
+            else
+            {
+                vectorY = 0;
+            }
         }
         if ((rightSensor.GetComponent<WallSensing>().isTouchingWall || leftSensor.GetComponent<WallSensing>().isTouchingWall) && upSensor.GetComponent<WallSensing>().isTouchingWall)
         {
@@ -53,6 +86,14 @@ public class Chase : MonoBehaviour
         if ((rightSensor.GetComponent<WallSensing>().isTouchingWall || leftSensor.GetComponent<WallSensing>().isTouchingWall) && downSensor.GetComponent<WallSensing>().isTouchingWall)
         {
             vectorY = 1;
+        }
+        if ((upSensor.GetComponent<WallSensing>().isTouchingWall && downSensor.GetComponent<WallSensing>().isTouchingWall) && leftSensor.GetComponent<WallSensing>().isTouchingWall)
+        {
+            vectorX = 1;
+        }
+        if ((upSensor.GetComponent<WallSensing>().isTouchingWall && downSensor.GetComponent<WallSensing>().isTouchingWall) && rightSensor.GetComponent<WallSensing>().isTouchingWall)
+        {
+            vectorX = -1;
         }
 
         Vector3 toTarget = new Vector3(vectorX, vectorY, 0);
@@ -85,6 +126,16 @@ public class Chase : MonoBehaviour
         {
             //assume target room number is less than this room number
             return isInRoom.GetComponent<RoomArea>().exitPointDecrease;
+        }
+    }
+
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            Object.Destroy(collision.gameObject);
+            gameOverScreen.SetActive(true);
+            Object.Destroy(this);
         }
     }
 }
