@@ -17,8 +17,7 @@ public class VendingMachine : MonoBehaviour
 
             IncreaseKick();
 
-            animator.SetBool("isplayimg", true);
-            //ImageChange();
+            Animations();
         }
 
 
@@ -27,8 +26,6 @@ public class VendingMachine : MonoBehaviour
     public GameObject Machinekick;
     public double CurrentKickCount { get; set; }
     public GameObject FoodGiver;
-    public Image NormalImage;
-    public Sprite HurtImage;
 
     public void OnMachinekick()
     {
@@ -37,15 +34,13 @@ public class VendingMachine : MonoBehaviour
     }
     public void IncreaseKick()
     {
-        CurrentKickCount += .5f;
+        CurrentKickCount += 1;
         print(CurrentKickCount);
     }
 
     public IEnumerator Size()
     {
-        // RectTransform rectTransform = GetComponent<RectTransform>();
-        // rectTransform.Rotate(new Vector3(0, 0, 3));
-        FoodGiver.transform.localScale = new Vector3(1f, 1f, 1f);
+        FoodGiver.transform.localScale = new Vector3(.75f, .75f, .75f);
         yield return new WaitForSeconds(.3f);
         FoodGiver.transform.localScale = new Vector3(.5f, .5f, .5f);
     }
@@ -53,11 +48,7 @@ public class VendingMachine : MonoBehaviour
         public void Animations()
     {
         animator.SetBool("isplaying", true);
+      
     }
-  //  public void ImageChange()
-   // {
-   //     NormalImage.sprite = HurtImage;
-       // yield return new WaitForSeconds(.3f);
-      //  HurtImage = NormalImage.sprite;
-   // }
+
 }
