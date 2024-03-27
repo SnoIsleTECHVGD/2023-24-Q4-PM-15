@@ -17,7 +17,7 @@ public class VendingMachine : MonoBehaviour
 
             IncreaseKick();
 
-            animator.SetBool("isplayimg, true");
+            animator.SetBool("isplayimg", true);
             //ImageChange();
         }
 

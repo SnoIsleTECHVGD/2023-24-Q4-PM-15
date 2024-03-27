@@ -255,6 +255,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f62e1390001d1514395955e7c44996ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   Machinekick: {fileID: 1644091503}
   FoodGiver: {fileID: 1644091503}
   NormalImage: {fileID: 1644091507}
