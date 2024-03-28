@@ -7,11 +7,24 @@ public class PuzzleActivation : MonoBehaviour
 {
     // Start is called before the first frame update
     public GameObject puzzleScreen;
-    public void OnTriggerEnter2D(Collider2D collision)
+    public void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
-            puzzleScreen.SetActive(true);
+            transform.GetChild(0).gameObject.SetActive(true);
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                puzzleScreen.SetActive(true);
+            }
+        }
+    }
+
+    public void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            transform.GetChild(0).gameObject.SetActive(false);
+            puzzleScreen.SetActive(false);
         }
     }
 }

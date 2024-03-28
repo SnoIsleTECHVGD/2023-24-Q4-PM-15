@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System.Linq;
+using TMPro;
 using UnityEngine.UIElements;
 
 public class Sort : MonoBehaviour
@@ -17,7 +17,7 @@ public class Sort : MonoBehaviour
     {
         isSorted = false;
         type = Random.Range(1, 4);
-        //this.GetComponentInChild<TextMesh>().text = type.ToString();
+        this.GetComponentInChildren<TextMeshProUGUI>().text = type.ToString();
     }
 
     // Update is called once per frame
@@ -32,7 +32,7 @@ public class Sort : MonoBehaviour
                 }
                 else
                 {
-                    shake();
+                StartCoroutine(shake());
                 }
             }
             else if (i == 2)
@@ -44,8 +44,8 @@ public class Sort : MonoBehaviour
                 }
                 else
                 {
-                    shake();
-                }
+                StartCoroutine(shake());
+            }
             }
             else if (i == 3)
             {
@@ -56,8 +56,8 @@ public class Sort : MonoBehaviour
                 }
                 else
                 {
-                    shake();
-                }
+                StartCoroutine(shake());
+            }
             }
             else if (i == 4)
             {
@@ -68,8 +68,8 @@ public class Sort : MonoBehaviour
                 }
                 else
                 {
-                    shake();
-                }
+                StartCoroutine(shake());
+            }
             }
     }
 
@@ -85,16 +85,16 @@ public class Sort : MonoBehaviour
 
     public IEnumerator shake()
     {
-        transform.Translate(-1, 0, 0);
-        yield return new WaitForSeconds(1);
-        transform.Translate(1, 0, 0);
-        yield return new WaitForSeconds(1);
-        transform.Translate(1, 0, 0);
-        yield return new WaitForSeconds(1);
-        transform.Translate(-1, 0, 0);
-        yield return new WaitForSeconds(1);
-        transform.Translate(-1, 0, 0);
-        yield return new WaitForSeconds(1);
-        transform.Translate(1, 0, 0);
+        transform.Translate(-5, 0, 0);
+        yield return new WaitForSeconds(0.1f);
+        transform.Translate(5, 0, 0);
+        yield return new WaitForSeconds(0.1f);
+        transform.Translate(5, 0, 0);
+        yield return new WaitForSeconds(0.1f);
+        transform.Translate(-5, 0, 0);
+        yield return new WaitForSeconds(0.1f);
+        transform.Translate(-5, 0, 0);
+        yield return new WaitForSeconds(0.1f);
+        transform.Translate(5, 0, 0);
     }
 }

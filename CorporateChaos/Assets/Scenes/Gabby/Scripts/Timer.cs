@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Timer : MonoBehaviour
@@ -8,10 +9,7 @@ public class Timer : MonoBehaviour
     public int minutes;
     public int seconds;
     public GameObject gameOver;
-    public GameObject digitOne;
-    public GameObject digitTwo;
-    public GameObject digitThree;
-    public GameObject digitFour;
+    public GameObject text;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,14 +28,6 @@ public class Timer : MonoBehaviour
         {
             if (minutes > 0 || seconds > 0)
             {
-               if (seconds < 10)
-                {
-                    Debug.Log(minutes + ":0" + seconds);
-                }
-               else
-                {
-                    Debug.Log(minutes + ":" + seconds);
-                }
                 
                 if (seconds > 0)
                 {
@@ -48,6 +38,7 @@ public class Timer : MonoBehaviour
                     minutes--;
                     seconds = 59;
                 }
+                decrementDigits();
                 yield return new WaitForSeconds(1);
             }
             else
@@ -57,5 +48,17 @@ public class Timer : MonoBehaviour
                 break;
             }
         }
+    }
+    public void decrementDigits()
+    {
+        if (seconds < 10)
+        {
+            text.GetComponent<TextMeshProUGUI>().text = minutes.ToString() + ":0" + seconds.ToString();
+        }
+        else
+        {
+            text.GetComponent<TextMeshProUGUI>().text = minutes.ToString() + ":" + seconds.ToString();
+        }
+        
     }
 }
