@@ -11,11 +11,18 @@ public class PuzzleActivation : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            transform.GetChild(0).gameObject.SetActive(true);
             if (Input.GetKeyDown(KeyCode.E))
             {
                 puzzleScreen.SetActive(true);
             }
+        }
+    }
+
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            transform.GetChild(0).gameObject.SetActive(true);
         }
     }
 

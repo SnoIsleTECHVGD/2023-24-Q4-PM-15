@@ -111,6 +111,10 @@ public class Chase : MonoBehaviour
         {
             vectorX = -1;
         }
+        if (downSensor.GetComponent<RoomTracker>().isInRoom != this.GetComponent<RoomTracker>().isInRoom && this.GetComponent<RoomTracker>().isInRoom == this.target.GetComponent<RoomTracker>().isInRoom)
+        {
+            vectorY = 1;
+        }
 
         Vector3 toTarget = new Vector3(vectorX, vectorY, 0);
         toTarget = Vector3.Normalize(toTarget);
