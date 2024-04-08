@@ -26,6 +26,7 @@ public class VendingMachine : MonoBehaviour
     public GameObject Machinekick;
     public double CurrentKickCount { get; set; }
     public GameObject FoodGiver;
+  
 
     public void OnMachinekick()
     {
@@ -47,8 +48,11 @@ public class VendingMachine : MonoBehaviour
 
         public void Animations()
     {
-        animator.SetBool("isplaying", true);
-      
+
+        animator.SetTrigger("Play");
+       // animator.SetBool("isplaying", false);
+
     }
+   
 
 }
