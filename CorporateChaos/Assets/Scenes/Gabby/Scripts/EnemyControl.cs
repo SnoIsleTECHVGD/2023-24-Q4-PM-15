@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyControl : MonoBehaviour
 {
+    public KeyCode key;
     public GameObject enemy;
     // Start is called before the first frame update
     void Start()
@@ -14,7 +15,7 @@ public class EnemyControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(key))
         {
             enemy.SetActive(true);
         }

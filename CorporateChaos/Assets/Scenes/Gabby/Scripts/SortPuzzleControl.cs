@@ -36,7 +36,7 @@ public class SortPuzzleControl : MonoBehaviour
             }
             else
             {
-                if (Input.GetKeyDown(KeyCode.Keypad1))
+                if (Input.GetKeyDown(KeyCode.Keypad1) || Input.GetKeyDown(KeyCode.Alpha1))
                 {
                     items[i].GetComponent<Sort>().doSort(1, spotShift1);
                     if (items[i].GetComponent<Sort>().isSorted)
@@ -44,7 +44,7 @@ public class SortPuzzleControl : MonoBehaviour
                         spotShift1 += 5;
                     }
                 }
-                else if (Input.GetKeyDown(KeyCode.Keypad2))
+                else if (Input.GetKeyDown(KeyCode.Keypad2) || Input.GetKeyDown(KeyCode.Alpha2))
                 {
                     items[i].GetComponent<Sort>().doSort(2, spotShift2);
                     if (items[i].GetComponent<Sort>().isSorted)
@@ -52,7 +52,7 @@ public class SortPuzzleControl : MonoBehaviour
                         spotShift2 += 5;
                     }
                 }
-                else if (Input.GetKeyDown(KeyCode.Keypad3))
+                else if (Input.GetKeyDown(KeyCode.Keypad3) || Input.GetKeyDown(KeyCode.Alpha3))
                 {
                     items[i].GetComponent<Sort>().doSort(3, spotShift3);
                     if (items[i].GetComponent<Sort>().isSorted)
@@ -60,7 +60,7 @@ public class SortPuzzleControl : MonoBehaviour
                         spotShift3 += 5;
                     }
                 }
-                else if (Input.GetKeyDown(KeyCode.Keypad4))
+                else if (Input.GetKeyDown(KeyCode.Keypad4) || Input.GetKeyDown(KeyCode.Alpha4))
                 {
                     items[i].GetComponent<Sort>().doSort(4, spotShift4);
                     if (items[i].GetComponent<Sort>().isSorted)
