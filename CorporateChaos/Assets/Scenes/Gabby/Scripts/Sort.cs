@@ -16,18 +16,18 @@ public class Sort : MonoBehaviour
     void Start()
     {
         isSorted = false;
-        type = Random.Range(1, 4);
+        type = Random.Range(1, 5);
         this.GetComponentInChildren<TextMeshProUGUI>().text = type.ToString();
     }
 
     // Update is called once per frame
-    public void doSort(int i)
+    public void doSort(int i, int shift)
     {
             if (i == 1)
             {
                 if (type == 1)
                 {
-                    transform.Translate(findX(spot1), findY(spot1), 0);
+                    transform.Translate(findX(spot1), findY(spot1) + shift, 0);
                     isSorted = true;
                 }
                 else
@@ -39,7 +39,7 @@ public class Sort : MonoBehaviour
             {
                 if (type == 2)
                 {
-                    transform.Translate(findX(spot2), findY(spot2), 0);
+                    transform.Translate(findX(spot2), findY(spot2) + shift, 0);
                     isSorted = true;
                 }
                 else
@@ -51,7 +51,7 @@ public class Sort : MonoBehaviour
             {
                 if (type == 3)
                 {
-                    transform.Translate(findX(spot3), findY(spot3), 0);
+                    transform.Translate(findX(spot3), findY(spot3) + shift, 0);
                     isSorted = true;
                 }
                 else
@@ -63,7 +63,7 @@ public class Sort : MonoBehaviour
             {
                 if (type == 4)
                 {
-                    transform.Translate(findX(spot4), findY(spot4), 0);
+                    transform.Translate(findX(spot4), findY(spot4) + shift, 0);
                     isSorted = true;
                 }
                 else

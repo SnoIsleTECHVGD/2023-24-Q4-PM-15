@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 9074205542406714815}
   - component: {fileID: 9074205542406714814}
   - component: {fileID: 9074205542406714809}
+  - component: {fileID: 678716550}
   m_Layer: 0
   m_Name: WallSensorLeft
-  m_TagString: Untagged
+  m_TagString: Sensor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -84,6 +85,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isTouchingWall: 0
+--- !u!114 &678716550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9074205542406714812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 274c478e33169bb4db0476ddb7739417, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInRoom: 0
 --- !u!1 &9074205542566986276
 GameObject:
   m_ObjectHideFlags: 0
@@ -96,9 +110,10 @@ GameObject:
   - component: {fileID: 9074205542566986279}
   - component: {fileID: 9074205542566986278}
   - component: {fileID: 9074205542566986273}
+  - component: {fileID: 2079828551}
   m_Layer: 0
   m_Name: WallSensorUp
-  m_TagString: Untagged
+  m_TagString: Sensor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -110,14 +125,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9074205542566986276}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 9074205542652391685}
   m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!70 &9074205542566986279
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -168,6 +183,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isTouchingWall: 0
+--- !u!114 &2079828551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9074205542566986276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 274c478e33169bb4db0476ddb7739417, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInRoom: 0
 --- !u!1 &9074205542652391929
 GameObject:
   m_ObjectHideFlags: 0
@@ -188,7 +216,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &9074205542652391685
 Transform:
   m_ObjectHideFlags: 0
@@ -328,6 +356,7 @@ MonoBehaviour:
   upSensor: {fileID: 9074205542566986276}
   downSensor: {fileID: 9074205542959889676}
   isInRoom: {fileID: 0}
+  gameOverScreen: {fileID: 0}
   targetInRoom: 0
   speed: 3.5
 --- !u!1 &9074205542959889676
@@ -342,9 +371,10 @@ GameObject:
   - component: {fileID: 9074205542959889679}
   - component: {fileID: 9074205542959889678}
   - component: {fileID: 9074205542959889673}
+  - component: {fileID: 384477640}
   m_Layer: 0
   m_Name: WallSensorDown
-  m_TagString: Untagged
+  m_TagString: Sensor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -356,14 +386,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9074205542959889676}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: -2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 9074205542652391685}
   m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!70 &9074205542959889679
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -414,6 +444,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isTouchingWall: 0
+--- !u!114 &384477640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9074205542959889676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 274c478e33169bb4db0476ddb7739417, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInRoom: 0
 --- !u!1 &9074205543075306177
 GameObject:
   m_ObjectHideFlags: 0
@@ -426,9 +469,10 @@ GameObject:
   - component: {fileID: 9074205543075306188}
   - component: {fileID: 9074205543075306179}
   - component: {fileID: 9074205543075306190}
+  - component: {fileID: 1066800114}
   m_Layer: 0
   m_Name: WallSensorRight
-  m_TagString: Untagged
+  m_TagString: Sensor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -498,3 +542,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isTouchingWall: 0
+--- !u!114 &1066800114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9074205543075306177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 274c478e33169bb4db0476ddb7739417, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInRoom: 0
