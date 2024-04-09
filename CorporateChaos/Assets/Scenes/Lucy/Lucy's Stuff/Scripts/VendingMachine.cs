@@ -9,16 +9,16 @@ using UnityEngine.UI;
 public class VendingMachine : MonoBehaviour
 {
     [SerializeField] public Animator animator;
-    private void Update()
+    public void kicking()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
+   
+        
             StartCoroutine(Size());
 
             IncreaseKick();
 
             Animations();
-        }
+        
 
 
     }
@@ -41,7 +41,7 @@ public class VendingMachine : MonoBehaviour
 
     public IEnumerator Size()
     {
-        FoodGiver.transform.localScale = new Vector3(.75f, .75f, .75f);
+        FoodGiver.transform.localScale = new Vector3(.67f, .67f, .67f);
         yield return new WaitForSeconds(.3f);
         FoodGiver.transform.localScale = new Vector3(.5f, .5f, .5f);
     }
