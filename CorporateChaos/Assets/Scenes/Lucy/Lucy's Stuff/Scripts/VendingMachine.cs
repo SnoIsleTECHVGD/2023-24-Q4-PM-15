@@ -50,7 +50,6 @@ public class VendingMachine : MonoBehaviour
     {
 
         animator.SetTrigger("Play");
-       // animator.SetBool("isplaying", false);
 
     }
    
