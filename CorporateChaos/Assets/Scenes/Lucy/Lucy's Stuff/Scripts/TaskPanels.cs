@@ -5,7 +5,7 @@ using UnityEngine;
 public class TaskPanels : MonoBehaviour
 {
    public GameObject TaskPanel = null;
-    private bool taskPanelOpened = true;
+    private bool taskPanelOpened = false;
     private bool inRadius;
 
     private void OnTriggerEnter2D(Collider2D collision)
