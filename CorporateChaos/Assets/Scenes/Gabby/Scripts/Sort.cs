@@ -71,6 +71,10 @@ public class Sort : MonoBehaviour
                 StartCoroutine(shake());
             }
             }
+            else if (i == 5)
+        {
+            StartCoroutine(shake());
+        }
     }
 
     public float findX(GameObject spot)

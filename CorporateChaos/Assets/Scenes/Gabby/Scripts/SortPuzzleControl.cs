@@ -68,6 +68,10 @@ public class SortPuzzleControl : MonoBehaviour
                         spotShift4 += 5;
                     }
                 }
+                else if (Input.anyKeyDown)
+                {
+                    items[i].GetComponent<Sort>().doSort(5, spotShift4);
+                }
             }
         }
         else
