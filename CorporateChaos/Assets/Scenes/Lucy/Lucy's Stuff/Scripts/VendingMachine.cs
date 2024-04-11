@@ -38,6 +38,13 @@ public class VendingMachine : MonoBehaviour
         CurrentKickCount += 1;
         print(CurrentKickCount);
     }
+    public void Endtask()
+    {
+        if (CurrentKickCount == 20)
+        {
+            print("Congrats!");
+        }
+    }
 
     public IEnumerator Size()
     {
