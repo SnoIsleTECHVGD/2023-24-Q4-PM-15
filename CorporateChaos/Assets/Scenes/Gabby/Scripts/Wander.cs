@@ -16,6 +16,11 @@ public class Wander : MonoBehaviour
     }
     async void Update()
     {
+        if (transform.rotation.z != 0)
+        {
+            Quaternion target = Quaternion.Euler(0, 0, 0);
+            transform.rotation = Quaternion.Slerp(transform.rotation, target, Time.deltaTime);
+        }
     }
 
     public void moveRandomDirection()
