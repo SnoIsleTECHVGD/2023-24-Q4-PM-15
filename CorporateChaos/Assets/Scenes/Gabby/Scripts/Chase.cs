@@ -26,6 +26,11 @@ public class Chase : MonoBehaviour
         {
             targetInRoom = target.GetComponent<RoomTracker>().isInRoom;
             chase(selectTarget());
+            if (transform.rotation.z != 0)
+            {
+                Quaternion target = Quaternion.Euler(0, 0, 0);
+                transform.rotation = Quaternion.Slerp(transform.rotation, target, Time.deltaTime);
+            }
         }
         
     }
