@@ -12,15 +12,10 @@ public class Wander : MonoBehaviour
     // Update is called once per frame
     private void Start()
     {
-        InvokeRepeating("moveRandomDirection", 0.5f, 0.1f);
+       InvokeRepeating("moveRandomDirection", 0.5f, 0.1f);
     }
     async void Update()
     {
-        //Vector3[] moveDirections = { Vector3.left, Vector3.up,Vector3.down, Vector3.right};
-        //transform.Translate(moveDirections[Mathf.FloorToInt(Random.Range(0, 4))] * Time.deltaTime * speed);
-
-        //get a direction
-
     }
 
     public void moveRandomDirection()
