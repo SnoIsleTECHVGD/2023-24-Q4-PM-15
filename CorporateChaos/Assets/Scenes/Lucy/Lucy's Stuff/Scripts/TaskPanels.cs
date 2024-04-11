@@ -22,8 +22,6 @@ public class TaskPanels : MonoBehaviour
         if (inRadius == true && Input.GetKeyDown(KeyCode.E)) 
 
             {
-          
-                taskPanelOpened = true;
                 ToggleTaskPanel();
             }
     }
@@ -32,7 +30,6 @@ public class TaskPanels : MonoBehaviour
     {
         taskPanelOpened = !taskPanelOpened;
         SetTaskPanelVisibility();
-        Debug.Log("Helppppp");
     }
     private void SetTaskPanelVisibility()
     {
@@ -42,7 +39,7 @@ public class TaskPanels : MonoBehaviour
         }
     }
     private void ExitTaskPanel()
-    {
+    {      
         taskPanelOpened = false;
         TaskPanel.SetActive(taskPanelOpened);
     }
