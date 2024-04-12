@@ -8,13 +8,19 @@ public class PuzzleActivation : MonoBehaviour
     // Start is called before the first frame update
     public bool canOpenPuzzle;
     public GameObject puzzleScreen;
+    public bool canShowButtonPrompt;
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player" && canShowButtonPrompt)
         {
             transform.GetChild(0).gameObject.SetActive(true);
             canOpenPuzzle = true;
+        }
+        else if (collision.gameObject.tag == "Player" && !canShowButtonPrompt)
+        {
+            canOpenPuzzle = true;
+            puzzleScreen.SetActive(true);
         }
     }
 
@@ -22,7 +28,10 @@ public class PuzzleActivation : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            transform.GetChild(0).gameObject.SetActive(false);
+            if (canShowButtonPrompt)
+            {
+                transform.GetChild(0).gameObject.SetActive(false);
+            }
             puzzleScreen.SetActive(false);
             canOpenPuzzle = false;
         }
@@ -33,6 +42,10 @@ public class PuzzleActivation : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E) && canOpenPuzzle)
         {
             puzzleScreen.SetActive(true);
+        }
+        if (!canOpenPuzzle && canShowButtonPrompt)
+        {
+            transform.GetChild(0).gameObject.SetActive(false);
         }
     }
 }

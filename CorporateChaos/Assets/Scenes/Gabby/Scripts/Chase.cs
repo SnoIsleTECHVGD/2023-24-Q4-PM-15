@@ -45,14 +45,6 @@ public class Chase : MonoBehaviour
             if (leftSensor.GetComponent<WallSensing>().isTouchingWall == false)
             {
                 vectorX = -1;
-                if (target.transform.position.y > transform.position.y)
-                {
-                    vectorY = 1;
-                }
-                else if (target.transform.position.y < transform.position.y)
-                {
-                    vectorY = -1;
-                }
             }
             else
             {
