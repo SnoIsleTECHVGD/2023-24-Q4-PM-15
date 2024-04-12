@@ -19,14 +19,15 @@ public class VendingMachine : MonoBehaviour
 
             Animations();
         
-
+        Endtask();
 
     }
 
     public GameObject Machinekick;
     public double CurrentKickCount { get; set; }
     public GameObject FoodGiver;
-  
+    public TaskPanels taskPanels;
+    
 
     public void OnMachinekick()
     {
@@ -42,7 +43,7 @@ public class VendingMachine : MonoBehaviour
     {
         if (CurrentKickCount == 20)
         {
-            print("Congrats!");
+           taskPanels.ExitTaskPanel();
         }
     }
 
