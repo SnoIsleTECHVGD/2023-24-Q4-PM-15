@@ -16,11 +16,15 @@ public class movement : MonoBehaviour
         moving.x = Input.GetAxisRaw("Horizontal");
         moving.y = Input.GetAxisRaw("Vertical");
 
+        GetComponent<Animator>().SetInteger("WalkDirection", 0);
+
        //hook up animations later
-       if (Input.GetKeyDown(left))
+       if (Input.GetKey(left))
         {
-            GetComponent<Animator>().SetInteger("WalkingDirection", 0);
+            GetComponent<Animator>().SetInteger("WalkDirection", 1);
         }
+
+     
     }
 
     void FixedUpdate()
