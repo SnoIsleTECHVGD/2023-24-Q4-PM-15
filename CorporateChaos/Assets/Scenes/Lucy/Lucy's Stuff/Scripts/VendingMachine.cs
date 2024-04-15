@@ -27,6 +27,7 @@ public class VendingMachine : MonoBehaviour
     public double CurrentKickCount { get; set; }
     public GameObject FoodGiver;
     public TaskPanels taskPanels;
+    public Victory Congrats;
     
 
     public void OnMachinekick()
