@@ -150,9 +150,8 @@ public class Chase : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            Object.Destroy(collision.gameObject);
             gameOverScreen.SetActive(true);
-            Object.Destroy(this);
+            collision.gameObject.GetComponent<SpriteRenderer>().enabled = false;
         }
     }
 }
