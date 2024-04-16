@@ -108,7 +108,7 @@ public class Chase : MonoBehaviour
         {
             vectorX = -1;
         }
-        if (downSensor.GetComponent<RoomTracker>().isInRoom != this.GetComponent<RoomTracker>().isInRoom && this.GetComponent<RoomTracker>().isInRoom == this.target.GetComponent<RoomTracker>().isInRoom)
+        if (leftSensor.GetComponent<WallSensing>().isTouchingWall && target.transform.position.x < this.transform.position.x && target.transform.position.y < this.transform.position.y)
         {
             vectorY = 1;
         }
