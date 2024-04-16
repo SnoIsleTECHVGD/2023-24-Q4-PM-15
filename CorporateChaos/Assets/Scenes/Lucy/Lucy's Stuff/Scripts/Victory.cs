@@ -6,13 +6,27 @@ public class Victory : MonoBehaviour
 {
     public GameObject VictoryPanel = null;
     public bool VictoryPanelOpened = false;
-    public double CurrentKickCount { get; set; }
+    public VendingMachine Win;
 
     public void Congrats()
     {
-        if (CurrentKickCount == 20)
+        if (Win.CurrentKickCount == 20)
         {
-            VictoryPanelOpened=true;
+            VictoryPanelOpened = true;
+            SetVictoryPanelVisibility();
+            
         }
+    }
+    public void SetVictoryPanelVisibility()
+    {
+       if (VictoryPanel != null)
+       {
+            VictoryPanel.SetActive(VictoryPanelOpened);
+       }
+    }
+    public void ExitVictoryPanel()
+    {
+        VictoryPanelOpened = false;
+        SetVictoryPanelVisibility();
     }
 }

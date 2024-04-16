@@ -45,6 +45,8 @@ public class VendingMachine : MonoBehaviour
         if (CurrentKickCount == 20)
         {
            taskPanels.ExitTaskPanel();
+            Congrats.Congrats();
+          
         }
     }
 

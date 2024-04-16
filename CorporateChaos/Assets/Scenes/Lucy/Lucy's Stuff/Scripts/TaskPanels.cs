@@ -41,7 +41,7 @@ public class TaskPanels : MonoBehaviour
     public void ExitTaskPanel()
     {      
         taskPanelOpened = false;
-        TaskPanel.SetActive(taskPanelOpened);
+        SetTaskPanelVisibility();
     }
     
 }
