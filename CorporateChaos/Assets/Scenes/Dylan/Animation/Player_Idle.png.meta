@@ -135,11 +135,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 3103
-        y: 2077
+        y: 2070
         width: 1242
         height: 2104
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.45498535, y: 0.69381773}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -152,36 +152,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Idle_1
-      rect:
-        serializedVersion: 2
-        x: 5470
-        y: 2078
-        width: 1242
-        height: 2021
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dbdafa106e78ce24fba10177c8656f0a
-      internalID: 1273280720
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Player_Idle_2
       rect:
         serializedVersion: 2
-        x: 7896
-        y: 2083
+        x: 7889
+        y: 2097
         width: 1248
         height: 2098
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.47792876, y: 0.6771273}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -189,6 +168,27 @@ TextureImporter:
       bones: []
       spriteID: 1a07009e648469c4092ca2e95b0ac705
       internalID: 52513478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Idle_1
+      rect:
+        serializedVersion: 2
+        x: 5419
+        y: 2026
+        width: 1300
+        height: 2104
+      alignment: 9
+      pivot: {x: 0.5, y: 0.68305814}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acbf172b8c25a4e45afc6355ea24ee7a
+      internalID: 1273280720
       vertices: []
       indices: 
       edges: []
@@ -206,6 +206,7 @@ TextureImporter:
     nameFileIdTable:
       Player_Idle_1: 1273280720
       Player_Idle_0: -1847108358
+      Player_Idle_3: -200042509
       Player_Idle_2: 52513478
   spritePackingTag: 
   pSDRemoveMatte: 0
