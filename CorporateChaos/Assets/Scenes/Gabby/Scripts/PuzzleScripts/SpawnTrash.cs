@@ -6,6 +6,7 @@ public class SpawnTrash : MonoBehaviour
 {
     public GameObject trashPrefab;
     public Transform parent;
+    public bool canSpawn;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +21,10 @@ public class SpawnTrash : MonoBehaviour
 
     public void spawn()
     {
-        Instantiate(trashPrefab, this.transform.position, Quaternion.identity, parent);
+        if (canSpawn)
+        {
+            Instantiate(trashPrefab, this.transform.position, Quaternion.identity, parent);
+        }
     }
 
 }

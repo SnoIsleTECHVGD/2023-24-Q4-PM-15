@@ -10,7 +10,7 @@ public class FallingTrash : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        transform.position = new Vector3(Random.Range(509 - range, 509 + range), transform.position.y, 0);
+        transform.position = new Vector3(Random.Range(transform.position.y - range, transform.position.y + range), transform.position.y, 0);
     }
 
     // Update is called once per frame

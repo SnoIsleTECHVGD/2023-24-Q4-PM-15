@@ -10,11 +10,12 @@ public class TaskList : MonoBehaviour
     public List<GameObject> tasks;
     public GameObject win;
     public GameObject UI;
+    public int tasksDone;
 
     // Update is called once per frame
     void Update()
     {
-        int tasksDone = 0;
+        tasksDone = 0;
         for(int i = 0; i < checklist.Count; i++)
         {
             if (checklist[i])
