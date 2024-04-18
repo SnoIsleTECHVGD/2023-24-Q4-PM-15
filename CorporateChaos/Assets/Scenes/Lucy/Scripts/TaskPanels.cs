@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class TaskPanels : MonoBehaviour
@@ -7,6 +8,7 @@ public class TaskPanels : MonoBehaviour
    public GameObject TaskPanel = null;
     public bool taskPanelOpened = false;
     public bool inRadius;
+    public movement moveing;
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
@@ -42,6 +44,10 @@ public class TaskPanels : MonoBehaviour
     {      
         taskPanelOpened = false;
         SetTaskPanelVisibility();
+    }
+    public void BreakLegs()
+    {
+       GetComponent(moveing).enabled = false;
     }
     
 }

@@ -28,7 +28,9 @@ public class VendingMachine : MonoBehaviour
     public GameObject FoodGiver;
     public TaskPanels taskPanels;
     public Victory Congrats;
-    
+    public GameObject VendingViz = null;
+    public bool VendindVizOpened = true;
+
 
     public void OnMachinekick()
     {
@@ -46,7 +48,8 @@ public class VendingMachine : MonoBehaviour
         {
            taskPanels.ExitTaskPanel();
             Congrats.Congrats();
-          
+            VendindVizOpened = false;
+            SetVendingVizibility();
         }
     }
 
@@ -63,6 +66,13 @@ public class VendingMachine : MonoBehaviour
         animator.SetTrigger("Play");
 
     }
-   
+    public void SetVendingVizibility()
+    {
+        if (VendingViz != null)
+        {
+            VendingViz.SetActive(VendindVizOpened);
+        }
+    }
+
 
 }
