@@ -45,9 +45,9 @@ public class TaskPanels : MonoBehaviour
         taskPanelOpened = false;
         SetTaskPanelVisibility();
     }
-    public void BreakLegs()
-    {
-       GetComponent(moveing).enabled = false;
-    }
+   // public void BreakLegs()
+   // {
+   //    GetComponent(moveing).enabled = false;
+   // }
     
 }
