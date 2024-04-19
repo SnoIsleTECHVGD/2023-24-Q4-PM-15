@@ -113,6 +113,9 @@ public class Chase : MonoBehaviour
             vectorY = 1;
         }
 
+        //get animation direction
+        animationDirection(vectorX, vectorY);
+
         Vector3 toTarget = new Vector3(vectorX, vectorY, 0);
         toTarget = Vector3.Normalize(toTarget);
         if (target.transform.position.x != transform.position.x && target.transform.position.y != transform.position.y)
@@ -152,6 +155,42 @@ public class Chase : MonoBehaviour
         {
             gameOverScreen.SetActive(true);
             collision.gameObject.GetComponent<SpriteRenderer>().enabled = false;
+        }
+    }
+
+    public void animationDirection(float x, float y)
+    {
+        float posX = x;
+        float posY = y;
+        if (x < 0)
+        {
+            posX *= -1;
+        }
+        if (y < 0)
+        {
+            posY *= -1;
+        }
+
+        if (y < 0 && posY > posX && GetComponent<Animator>().GetInteger("direction") != 0)
+        {
+            GetComponent<Animator>().SetInteger("direction", 0);
+        }
+        else if (posY > posX && GetComponent<Animator>().GetInteger("direction") != 2)
+        {
+            GetComponent<Animator>().SetInteger("direction", 2);
+        }
+        else if (GetComponent<Animator>().GetInteger("direction") != 1 && posX > posY)
+        {
+            GetComponent<Animator>().SetInteger("direction", 1);
+        }
+
+        if (x < 0 && posX > posY)
+        {
+            GetComponent<SpriteRenderer>().flipX = true;
+        }
+        else
+        {
+            GetComponent<SpriteRenderer>().flipX = false;
         }
     }
 }
