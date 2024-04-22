@@ -38,35 +38,19 @@ public class SortPuzzleControl : MonoBehaviour
             {
                 if (Input.GetKeyDown(KeyCode.Keypad1) || Input.GetKeyDown(KeyCode.Alpha1))
                 {
-                    items[i].GetComponent<Sort>().doSort(1, spotShift1);
-                    if (items[i].GetComponent<Sort>().isSorted)
-                    {
-                        spotShift1 += 5;
-                    }
+                    sortOption1();
                 }
                 else if (Input.GetKeyDown(KeyCode.Keypad2) || Input.GetKeyDown(KeyCode.Alpha2))
                 {
-                    items[i].GetComponent<Sort>().doSort(2, spotShift2);
-                    if (items[i].GetComponent<Sort>().isSorted)
-                    {
-                        spotShift2 += 5;
-                    }
+                    sortOption2();
                 }
                 else if (Input.GetKeyDown(KeyCode.Keypad3) || Input.GetKeyDown(KeyCode.Alpha3))
                 {
-                    items[i].GetComponent<Sort>().doSort(3, spotShift3);
-                    if (items[i].GetComponent<Sort>().isSorted)
-                    {
-                        spotShift3 += 5;
-                    }
+                    sortOption3();
                 }
                 else if (Input.GetKeyDown(KeyCode.Keypad4) || Input.GetKeyDown(KeyCode.Alpha4))
                 {
-                    items[i].GetComponent<Sort>().doSort(4, spotShift4);
-                    if (items[i].GetComponent<Sort>().isSorted)
-                    {
-                        spotShift4 += 5;
-                    }
+                    sortOption4();
                 }
                 else if (Input.anyKeyDown)
                 {
@@ -79,5 +63,41 @@ public class SortPuzzleControl : MonoBehaviour
             taskComplete.SetActive(true);
         }
         
+    }
+
+    public void sortOption1()
+    {
+        items[i].GetComponent<Sort>().doSort(1, spotShift1);
+        if (items[i].GetComponent<Sort>().isSorted)
+        {
+            spotShift1 += 5;
+        }
+    }
+
+    public void sortOption2()
+    {
+        items[i].GetComponent<Sort>().doSort(2, spotShift2);
+        if (items[i].GetComponent<Sort>().isSorted)
+        {
+            spotShift2 += 5;
+        }
+    }
+
+    public void sortOption3()
+    {
+        items[i].GetComponent<Sort>().doSort(3, spotShift3);
+        if (items[i].GetComponent<Sort>().isSorted)
+        {
+            spotShift3 += 5;
+        }
+    }
+
+    public void sortOption4()
+    {
+        items[i].GetComponent<Sort>().doSort(4, spotShift4);
+        if (items[i].GetComponent<Sort>().isSorted)
+        {
+            spotShift4 += 5;
+        }
     }
 }

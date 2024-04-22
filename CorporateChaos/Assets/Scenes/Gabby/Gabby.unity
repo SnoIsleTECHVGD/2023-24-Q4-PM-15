@@ -415,6 +415,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5114255111792747788, guid: 38cfa9d48eb9be34e865948965d2b3d9, type: 3}
   m_PrefabInstance: {fileID: 5114255110932705981}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &889149362 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5114255111792747787, guid: 38cfa9d48eb9be34e865948965d2b3d9, type: 3}
+  m_PrefabInstance: {fileID: 5114255110932705981}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 889149361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 616094946f51797499f6ff86be9012db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &904346751
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1507,6 +1518,18 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -120
       objectReference: {fileID: 0}
+    - target: {fileID: 5114255110093216398, guid: 38cfa9d48eb9be34e865948965d2b3d9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 889149362}
+    - target: {fileID: 5114255110093216398, guid: 38cfa9d48eb9be34e865948965d2b3d9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: sortOption4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5114255110093216398, guid: 38cfa9d48eb9be34e865948965d2b3d9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SortPuzzleControl, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 5114255110180385854, guid: 38cfa9d48eb9be34e865948965d2b3d9, type: 3}
       propertyPath: m_fontColor.b
       value: 0
@@ -1538,6 +1561,30 @@ PrefabInstance:
     - target: {fileID: 5114255110341354148, guid: 38cfa9d48eb9be34e865948965d2b3d9, type: 3}
       propertyPath: m_fontColor32.rgba
       value: 4278190080
+      objectReference: {fileID: 0}
+    - target: {fileID: 5114255110357905229, guid: 38cfa9d48eb9be34e865948965d2b3d9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 889149362}
+    - target: {fileID: 5114255110357905229, guid: 38cfa9d48eb9be34e865948965d2b3d9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: sortOption3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5114255110357905229, guid: 38cfa9d48eb9be34e865948965d2b3d9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SortPuzzleControl, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5114255110393594734, guid: 38cfa9d48eb9be34e865948965d2b3d9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 889149362}
+    - target: {fileID: 5114255110393594734, guid: 38cfa9d48eb9be34e865948965d2b3d9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: sortOption2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5114255110393594734, guid: 38cfa9d48eb9be34e865948965d2b3d9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SortPuzzleControl, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 5114255110401283112, guid: 38cfa9d48eb9be34e865948965d2b3d9, type: 3}
       propertyPath: m_fontColor.b
@@ -1582,6 +1629,18 @@ PrefabInstance:
     - target: {fileID: 5114255110754276063, guid: 38cfa9d48eb9be34e865948965d2b3d9, type: 3}
       propertyPath: m_fontColor.r
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5114255110918007295, guid: 38cfa9d48eb9be34e865948965d2b3d9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 889149362}
+    - target: {fileID: 5114255110918007295, guid: 38cfa9d48eb9be34e865948965d2b3d9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: sortOption1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5114255110918007295, guid: 38cfa9d48eb9be34e865948965d2b3d9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SortPuzzleControl, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 5114255110951284277, guid: 38cfa9d48eb9be34e865948965d2b3d9, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -1702,6 +1761,10 @@ PrefabInstance:
     - target: {fileID: 5114255111792747788, guid: 38cfa9d48eb9be34e865948965d2b3d9, type: 3}
       propertyPath: m_Name
       value: Sort Files Puzzle
+      objectReference: {fileID: 0}
+    - target: {fileID: 5114255111792747788, guid: 38cfa9d48eb9be34e865948965d2b3d9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5114255111792747790, guid: 38cfa9d48eb9be34e865948965d2b3d9, type: 3}
       propertyPath: m_MatchWidthOrHeight
