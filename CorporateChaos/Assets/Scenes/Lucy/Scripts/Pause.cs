@@ -13,15 +13,22 @@ public class Pause : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            Paused();
-           // Resume();
+            if (PausePanelOpened == false)
+            {
+                Paused();
+            }
+
+            else
+            {
+                Resume();
+            }
         }
     }
     public void Paused()
     {
-       // PausePanelOpened = !PausePanelOpened;
+       PausePanelOpened = true;
         SetPauseVisibility();
-       // Time.timeScale = 0f;
+        Time.timeScale = 0f;
     }
 
     public void SetPauseVisibility()
