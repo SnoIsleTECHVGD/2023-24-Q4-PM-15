@@ -52,7 +52,7 @@ public class SortPuzzleControl : MonoBehaviour
                 {
                     sortOption4();
                 }
-                else if (Input.anyKeyDown)
+                else if (Input.anyKeyDown && !Input.GetKeyDown(KeyCode.Mouse0))
                 {
                     items[i].GetComponent<Sort>().doSort(5, spotShift4);
                 }

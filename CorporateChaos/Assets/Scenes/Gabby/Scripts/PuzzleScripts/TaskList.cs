@@ -9,7 +9,6 @@ public class TaskList : MonoBehaviour
     public List<bool> checklist;
     public List<GameObject> tasks;
     public GameObject win;
-    public GameObject UI;
     public int tasksDone;
 
     // Update is called once per frame
