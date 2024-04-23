@@ -44,6 +44,14 @@ public class movement : MonoBehaviour
         {
             GetComponent<Animator>().SetInteger("WalkDirection", 1);
         }
+        if (Input.GetKey(down))
+        {
+            GetComponent<Animator>().SetInteger("WalkDirection", 2);
+        }
+        if (Input.GetKey(up))
+        {
+            GetComponent<Animator>().SetInteger("WalkDirection", 3);
+        }
     }
 
     void FixedUpdate()
