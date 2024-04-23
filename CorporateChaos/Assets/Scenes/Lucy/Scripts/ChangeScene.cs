@@ -13,4 +13,9 @@ public class ChangeScene : MonoBehaviour
     { 
         Application.Quit(); 
     }
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+        Time.timeScale = 1f;
+    }
 }
