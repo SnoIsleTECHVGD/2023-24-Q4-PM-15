@@ -42,55 +42,35 @@ public class Chase : MonoBehaviour
 
         if (rightSensor.GetComponent<WallSensing>().isTouchingWall && vectorX > 0)
         {
-            if (leftSensor.GetComponent<WallSensing>().isTouchingWall == false)
-            {
-                vectorX = -1;
-            }
-            else
-            {
-                vectorX = 0;
-            }
+            vectorX = 0;
+        }
+        if (rightSensor.GetComponent<WallSensing>().isTouchingRobot && vectorX > 0)
+        {
+            vectorX = -1;
         }
         if (leftSensor.GetComponent<WallSensing>().isTouchingWall && vectorX < 0)
         {
-            if (rightSensor.GetComponent<WallSensing>().isTouchingWall == false)
-            {
-                vectorX = 1;
-                if (target.transform.position.y > transform.position.y)
-                {
-                    vectorY = 1;
-                }
-                else if (target.transform.position.y < transform.position.y)
-                {
-                    vectorY = -1;
-                }
-            }
-            else
-            {
-                vectorX = 0;
-            }
+            vectorX = 0;
+        }
+        if (leftSensor.GetComponent<WallSensing>().isTouchingRobot && vectorX < 0)
+        {
+            vectorX = 1;
         }
         if (upSensor.GetComponent<WallSensing>().isTouchingWall && vectorY > 0)
         {
-            if (downSensor.GetComponent<WallSensing>().isTouchingWall == false)
-            {
-                vectorY = -1;
-            }
-            else
-            {
-                vectorY = 0;
-            }
-        } 
+            vectorY = 0;
+        }
+        if (upSensor.GetComponent<WallSensing>().isTouchingRobot && vectorY > 0)
+        {
+            vectorY = -1;
+        }
         if (downSensor.GetComponent<WallSensing>().isTouchingWall && vectorY < 0)
         {
-            if (upSensor.GetComponent<WallSensing>().isTouchingWall == false)
-            {
-                vectorY = 1;
-            }
-            else
-            {
-                vectorY = 0;
-            }
+            vectorY = 0;
+        }
+        if (downSensor.GetComponent<WallSensing>().isTouchingRobot && vectorY < 0)
+        {
+            vectorY = 1;
         }
         if ((rightSensor.GetComponent<WallSensing>().isTouchingWall || leftSensor.GetComponent<WallSensing>().isTouchingWall) && upSensor.GetComponent<WallSensing>().isTouchingWall)
         {

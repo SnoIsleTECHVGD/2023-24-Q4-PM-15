@@ -890,9 +890,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Passive Robot
       objectReference: {fileID: 0}
-    - target: {fileID: 480415631763537786, guid: 6484cd3dfcc2b4b4eaa01ce507e628ff, type: 3}
-      propertyPath: speed
-      value: 0.5
+    - target: {fileID: 480415631763537767, guid: 6484cd3dfcc2b4b4eaa01ce507e628ff, type: 3}
+      propertyPath: m_TagString
+      value: Robot
       objectReference: {fileID: 0}
     - target: {fileID: 480415631763537787, guid: 6484cd3dfcc2b4b4eaa01ce507e628ff, type: 3}
       propertyPath: m_RootOrder
