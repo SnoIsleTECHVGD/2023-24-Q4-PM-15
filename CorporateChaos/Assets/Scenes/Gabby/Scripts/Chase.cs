@@ -14,6 +14,7 @@ public class Chase : MonoBehaviour
     public GameObject downSensor;
     public GameObject isInRoom;
     public GameObject gameOverScreen;
+    public GameObject timer;
     
     public float targetInRoom;
     public float speed;
