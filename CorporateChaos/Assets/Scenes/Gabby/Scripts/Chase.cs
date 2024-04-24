@@ -163,6 +163,10 @@ public class Chase : MonoBehaviour
         {
             GetComponent<Animator>().SetInteger("direction", 1);
         }
+        else if (x == 0 && y == 0)
+        {
+            GetComponent<Animator>().SetInteger("direction", 3);
+        }
 
         if (x < 0 && posX > posY)
         {

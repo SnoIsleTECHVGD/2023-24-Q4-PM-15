@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f692e0f970d630f4bbcf2aef94fe889c
+guid: bcf923f728730104493dbfea6e15d814
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -131,148 +131,64 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Untitled-1-Recovered 1_0
+      name: IdleRobot_0
       rect:
         serializedVersion: 2
-        x: 575
-        y: 758
-        width: 1503
-        height: 1924
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 925
+        y: 685
+        width: 1259
+        height: 1832
+      alignment: 9
+      pivot: {x: 0.5681674, y: 0.50167316}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 24c2a9ac005d7654eadcb7c960933ba4
-      internalID: 1414513930
+      spriteID: dba473a028c500a4fa4973364d53282a
+      internalID: 1370556132
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Untitled-1-Recovered 1_1
+      name: IdleRobot_1
       rect:
         serializedVersion: 2
-        x: 2966
-        y: 758
-        width: 1500
-        height: 1924
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 3321
+        y: 722
+        width: 1278
+        height: 1758
+      alignment: 9
+      pivot: {x: 0.555162, y: 0.50523055}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 654ee7456796c3841acc1e2a0214bbaa
-      internalID: -1814134475
+      spriteID: 840215d33f03db842af8b0ab1853076c
+      internalID: -523428456
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Untitled-1-Recovered 1_2
+      name: IdleRobot_2
       rect:
         serializedVersion: 2
-        x: 5363
-        y: 750
-        width: 1490
-        height: 1945
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 5708
+        y: 704
+        width: 1437
+        height: 1794
+      alignment: 9
+      pivot: {x: 0.5021329, y: 0.50854266}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bac36e27f7a5acd40b37001ec942822f
-      internalID: -571854660
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Untitled-1-Recovered 1_3
-      rect:
-        serializedVersion: 2
-        x: 7772
-        y: 758
-        width: 1534
-        height: 1937
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cf6732c40d787d34bbf23cc3c8bfc268
-      internalID: -73376281
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Untitled-1-Recovered 1_4
-      rect:
-        serializedVersion: 2
-        x: 10172
-        y: 750
-        width: 1538
-        height: 1941
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dc051f25c794e4d40a21bf99b3e54359
-      internalID: 1827363142
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Untitled-1-Recovered 1_5
-      rect:
-        serializedVersion: 2
-        x: 12581
-        y: 750
-        width: 1534
-        height: 1936
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5e8d54f064c3c1d438bca428c8d92e8a
-      internalID: -1339380140
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Untitled-1-Recovered 1_6
-      rect:
-        serializedVersion: 2
-        x: 14985
-        y: 750
-        width: 1538
-        height: 1941
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5b3039a91dce612428a1278902d407f3
-      internalID: 262896090
+      spriteID: 30ebb697e45f6674b9443e78c3e9a8a1
+      internalID: -2124199606
       vertices: []
       indices: 
       edges: []
@@ -288,14 +204,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Untitled-1-Recovered 1_3: -73376281
-      Untitled-1-Recovered 1_6: 262896090
-      Untitled-1-Recovered 1_5: -1339380140
-      Untitled-1-Recovered 1_7: -1485989735
-      Untitled-1-Recovered 1_1: -1814134475
-      Untitled-1-Recovered 1_4: 1827363142
-      Untitled-1-Recovered 1_2: -571854660
-      Untitled-1-Recovered 1_0: 1414513930
+      IdleRobot_0: 1370556132
+      IdleRobot_1: -523428456
+      IdleRobot_2: -2124199606
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 
