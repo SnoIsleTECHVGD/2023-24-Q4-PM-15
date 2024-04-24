@@ -14,6 +14,7 @@ public class Chase : MonoBehaviour
     public GameObject downSensor;
     public GameObject isInRoom;
     public GameObject gameOverScreen;
+    public GameObject timer;
     
     public float targetInRoom;
     public float speed;
@@ -42,55 +43,35 @@ public class Chase : MonoBehaviour
 
         if (rightSensor.GetComponent<WallSensing>().isTouchingWall && vectorX > 0)
         {
-            if (leftSensor.GetComponent<WallSensing>().isTouchingWall == false)
-            {
-                vectorX = -1;
-            }
-            else
-            {
-                vectorX = 0;
-            }
+            vectorX = 0;
+        }
+        if (rightSensor.GetComponent<WallSensing>().isTouchingRobot && vectorX > 0)
+        {
+            vectorX = -1;
         }
         if (leftSensor.GetComponent<WallSensing>().isTouchingWall && vectorX < 0)
         {
-            if (rightSensor.GetComponent<WallSensing>().isTouchingWall == false)
-            {
-                vectorX = 1;
-                if (target.transform.position.y > transform.position.y)
-                {
-                    vectorY = 1;
-                }
-                else if (target.transform.position.y < transform.position.y)
-                {
-                    vectorY = -1;
-                }
-            }
-            else
-            {
-                vectorX = 0;
-            }
+            vectorX = 0;
+        }
+        if (leftSensor.GetComponent<WallSensing>().isTouchingRobot && vectorX < 0)
+        {
+            vectorX = 1;
         }
         if (upSensor.GetComponent<WallSensing>().isTouchingWall && vectorY > 0)
         {
-            if (downSensor.GetComponent<WallSensing>().isTouchingWall == false)
-            {
-                vectorY = -1;
-            }
-            else
-            {
-                vectorY = 0;
-            }
-        } 
+            vectorY = 0;
+        }
+        if (upSensor.GetComponent<WallSensing>().isTouchingRobot && vectorY > 0)
+        {
+            vectorY = -1;
+        }
         if (downSensor.GetComponent<WallSensing>().isTouchingWall && vectorY < 0)
         {
-            if (upSensor.GetComponent<WallSensing>().isTouchingWall == false)
-            {
-                vectorY = 1;
-            }
-            else
-            {
-                vectorY = 0;
-            }
+            vectorY = 0;
+        }
+        if (downSensor.GetComponent<WallSensing>().isTouchingRobot && vectorY < 0)
+        {
+            vectorY = 1;
         }
         if ((rightSensor.GetComponent<WallSensing>().isTouchingWall || leftSensor.GetComponent<WallSensing>().isTouchingWall) && upSensor.GetComponent<WallSensing>().isTouchingWall)
         {
@@ -182,6 +163,10 @@ public class Chase : MonoBehaviour
         else if (GetComponent<Animator>().GetInteger("direction") != 1 && posX > posY)
         {
             GetComponent<Animator>().SetInteger("direction", 1);
+        }
+        else if (x == 0 && y == 0)
+        {
+            GetComponent<Animator>().SetInteger("direction", 3);
         }
 
         if (x < 0 && posX > posY)
