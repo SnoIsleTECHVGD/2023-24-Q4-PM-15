@@ -4,15 +4,38 @@ using UnityEngine;
 
 public class Credits : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public GameObject MoveSlide = null;
+   // public GameObject MoveSlide2 = null;
+    public bool SlideOpened = false;
+
+    public void Update()
     {
-        
+        NextSlide();
+        LastSlide();
+    }
+    public void NextSlide()
+    {
+        SlideOpened = true;
+      //  SetSlideVisibility();
+       
     }
 
-    // Update is called once per frame
-    void Update()
+   // public void SetSlideVisibility()
+    //{
+     //   if (MoveSlide != null)
+     //   {
+     //       MoveSlide.SetActive(SlideOpened);
+      //  }
+      //  if (MoveSlide2 != null)
+       // {
+      //      MoveSlide2.SetActive(SlideOpened);
+      //  }
+   // }
+
+    public void LastSlide()
     {
-        
+        SlideOpened = false;
+
+       // SetSlideVisibility();
     }
 }
