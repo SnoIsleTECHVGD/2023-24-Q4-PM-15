@@ -28,6 +28,8 @@ public class EnemyControl : MonoBehaviour
                 AIAlert.GetComponent<Dialogue>().resetDialogue(alert);
                 AIAlert.GetComponent<Dialogue>().activationCircle.SetActive(true);
                 AIAlert.GetComponent<Dialogue>().activationCircle.GetComponent<PuzzleActivation>().canOpenPuzzle = true;
+                AIAlert.GetComponent<Dialogue>().activationCircle.GetComponent<PuzzleActivation>().puzzleScreen.SetActive(true);
+                AIAlert.transform.position = new Vector3(0, 0, 0);
                 canChangeAI = false;
             }
             enemy.SetActive(true);

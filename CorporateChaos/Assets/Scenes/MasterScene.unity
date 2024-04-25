@@ -1946,9 +1946,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 862329179}
     - target: {fileID: 1654084919716418511, guid: 82c7fbfefef27bf4c8541855f4915e5d, type: 3}
+      propertyPath: AIAlert
+      value: 
+      objectReference: {fileID: 1775491056}
+    - target: {fileID: 1654084919716418511, guid: 82c7fbfefef27bf4c8541855f4915e5d, type: 3}
       propertyPath: taskMaster
       value: 
       objectReference: {fileID: 2051307666}
+    - target: {fileID: 1654084919716418511, guid: 82c7fbfefef27bf4c8541855f4915e5d, type: 3}
+      propertyPath: canChangeAI
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1654084919716418511, guid: 82c7fbfefef27bf4c8541855f4915e5d, type: 3}
       propertyPath: tasksNeeded
       value: 1
