@@ -85,6 +85,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isTouchingWall: 0
+  isTouchingRobot: 0
+  setX: 0
+  setY: 0
 --- !u!114 &678716550
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -183,6 +186,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isTouchingWall: 0
+  isTouchingRobot: 0
+  setX: 0
+  setY: 0
 --- !u!114 &2079828551
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -235,7 +241,7 @@ Transform:
   - {fileID: 9074205542566986277}
   - {fileID: 9074205542959889677}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &9074205542652391684
 SpriteRenderer:
@@ -358,8 +364,9 @@ MonoBehaviour:
   downSensor: {fileID: 9074205542959889676}
   isInRoom: {fileID: 0}
   gameOverScreen: {fileID: 0}
+  timer: {fileID: 0}
   targetInRoom: 0
-  speed: 3.5
+  speed: 2.5
 --- !u!95 &1609289860
 Animator:
   serializedVersion: 4
@@ -465,6 +472,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isTouchingWall: 0
+  isTouchingRobot: 0
+  setX: 0
+  setY: 0
 --- !u!114 &384477640
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -563,6 +573,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isTouchingWall: 0
+  isTouchingRobot: 0
+  setX: 0
+  setY: 0
 --- !u!114 &1066800114
 MonoBehaviour:
   m_ObjectHideFlags: 0

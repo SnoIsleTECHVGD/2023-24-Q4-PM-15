@@ -2,12 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using UnityEngine.UIElements;
+using UnityEngine.UI;
 
 public class Sort : MonoBehaviour
 {
     public bool isSorted;
     public int type;
+    public Sprite poster1;
+    public Sprite poster2;
+    public Sprite poster3;
+    public Sprite poster4;
     public GameObject spot1;
     public GameObject spot2;
     public GameObject spot3;
@@ -17,7 +21,23 @@ public class Sort : MonoBehaviour
     {
         isSorted = false;
         type = Random.Range(1, 5);
-        this.GetComponentInChildren<TextMeshProUGUI>().text = type.ToString();
+        if (type == 1)
+        {
+            this.GetComponent<Image>().sprite = poster1;
+        }
+        else if (type == 2)
+        {
+            this.GetComponent<Image>().sprite = poster2;
+        }
+        else if (type == 3)
+        {
+            this.GetComponent<Image>().sprite = poster3;
+        }
+        else
+        {
+            this.GetComponent<Image>().sprite = poster4;
+        }
+
     }
 
     // Update is called once per frame

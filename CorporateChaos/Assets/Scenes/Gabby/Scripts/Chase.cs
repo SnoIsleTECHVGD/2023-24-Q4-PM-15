@@ -130,12 +130,17 @@ public class Chase : MonoBehaviour
         }
     }
 
-    public void OnCollisionEnter2D(Collision2D collision)
+    public void OnCollisionStay2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
-            gameOverScreen.SetActive(true);
-            collision.gameObject.GetComponent<SpriteRenderer>().enabled = false;
+            //gameOverScreen.SetActive(true);
+            //collision.gameObject.GetComponent<SpriteRenderer>().enabled = false;
+            if (timer.GetComponent<Timer>().seconds > 0)
+            {
+            timer.GetComponent<Timer>().seconds--;
+                timer.GetComponent<Timer>().decrementDigits();
+            }
         }
     }
 

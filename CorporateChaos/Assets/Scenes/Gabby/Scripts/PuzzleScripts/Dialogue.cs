@@ -35,5 +35,6 @@ public class Dialogue : MonoBehaviour
     public void resetDialogue(List<string> newLines)
     {
         lines = newLines;
+        onLine = 0;
     }
 }
