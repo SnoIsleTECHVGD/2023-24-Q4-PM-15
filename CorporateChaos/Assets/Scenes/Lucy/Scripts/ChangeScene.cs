@@ -18,4 +18,8 @@ public class ChangeScene : MonoBehaviour
         SceneManager.LoadScene("MainMenu");
         Time.timeScale = 1f;
     }
+    public void Credits()
+    {
+        SceneManager.LoadScene("Credits");
+    }
 }
