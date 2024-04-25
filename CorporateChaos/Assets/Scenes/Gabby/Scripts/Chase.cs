@@ -123,6 +123,10 @@ public class Chase : MonoBehaviour
         {
             return isInRoom.GetComponent<RoomArea>().exitPointSpecial2;
         }
+        else if (targetInRoom == 2.5f && this.GetComponent<RoomTracker>().isInRoom == 3)
+        {
+            return isInRoom.GetComponent<RoomArea>().exitPointSpecial1;
+        }
         else
         {
             //assume target room number is less than this room number
