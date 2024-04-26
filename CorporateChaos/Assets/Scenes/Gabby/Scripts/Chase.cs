@@ -41,6 +41,8 @@ public class Chase : MonoBehaviour
         float vectorX = target.transform.position.x - transform.position.x;
         float vectorY = target.transform.position.y - transform.position.y;
 
+        Debug.Log(target);
+
         if (rightSensor.GetComponent<WallSensing>().isTouchingWall && vectorX > 0)
         {
             vectorX = 0;
@@ -89,9 +91,9 @@ public class Chase : MonoBehaviour
         {
             vectorX = -1;
         }
-        if (leftSensor.GetComponent<WallSensing>().isTouchingWall && target.transform.position.x < this.transform.position.x && target.transform.position.y < this.transform.position.y)
+        if (leftSensor.GetComponent<WallSensing>().isTouchingWall && rightSensor.GetComponent<WallSensing>().isTouchingWall && upSensor.GetComponent<WallSensing>().isTouchingWall)
         {
-            vectorY = 1;
+            vectorY = -1;
         }
 
         //get animation direction

@@ -11,6 +11,7 @@ public class RoomArea : MonoBehaviour
     public GameObject exitPointSpecial2;
     public float roomNum;
     public bool veto = false;
+
     public void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player" || collision.gameObject.tag == "Sensor")

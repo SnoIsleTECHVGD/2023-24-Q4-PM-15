@@ -7,16 +7,12 @@ public class FallingTrash : MonoBehaviour
 {
     public float range;
     public bool isCaught;
+    public List<Sprite> sprites;
     // Start is called before the first frame update
     void Start()
     {
         transform.position = new Vector3(Random.Range(transform.position.y - range, transform.position.y + range), transform.position.y, 0);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
+        GetComponent<Image>().sprite = sprites[Random.Range(0, sprites.Count - 2)];
     }
 
 
