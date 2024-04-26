@@ -8,6 +8,8 @@ public class PlungerPuzzleInnerWorkings : MonoBehaviour
     public GameObject Toilet;
     public bool unClogged = false;
     public int Counter = 0;
+    public float limit;
+    public float limitHeight;
 
     private void OnMouseDown()
     {
@@ -16,14 +18,29 @@ public class PlungerPuzzleInnerWorkings : MonoBehaviour
 
     private void OnMouseDrag()
     {
-        transform.position = (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition) - difference;
+        GetComponent<Rigidbody2D>().position = (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition) - difference;
     }
 
 
     // Update is called once per frame
     void Update()
     {
-        
+        RaycastHit2D hit;
+        Ray2D wall = new Ray2D(transform.position, Vector2.up);
+
+        if (unClogged)
+        {
+            if(Physics2D.Raycast(wall, out hit, limit))
+            {
+                cannotPass();
+            }
+        }
+    }
+
+    void cannotPass()
+    {
+        limit = true;
+        Rigidbody2D.drag = limitHeight;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
