@@ -26,10 +26,11 @@ public class PlungerPuzzleInnerWorkings : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
         //Water.GetComponent<Renderer>().enabled = false;
         Counter = Counter + 1;
+        GetComponent<ParticleSystem>().Play();
 
         if (Counter == 10)
         {
