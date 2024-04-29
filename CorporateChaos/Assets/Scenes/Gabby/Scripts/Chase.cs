@@ -95,6 +95,10 @@ public class Chase : MonoBehaviour
         {
             vectorY = -1;
         }
+        if (targetInRoom == GetComponent<RoomTracker>().isInRoom && leftSensor.GetComponent<WallSensing>().isTouchingWall)
+        {
+            vectorY = 1;
+        }
 
         //get animation direction
         animationDirection(vectorX, vectorY);

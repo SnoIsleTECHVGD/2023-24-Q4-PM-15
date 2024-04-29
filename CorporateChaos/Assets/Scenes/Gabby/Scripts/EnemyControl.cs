@@ -24,7 +24,7 @@ public class EnemyControl : MonoBehaviour
             {
                 List<string> alert = new List<string>();
                 alert.Add("!Warning! Unauthorized robot has entered the building");
-                alert.Add("It seems to be an angry ex-employee, looking for you.");
+                alert.Add("It seems to be one of your ex-employees...");
                 AIAlert.GetComponent<Dialogue>().resetDialogue(alert);
                 AIAlert.GetComponent<Dialogue>().activationCircle.SetActive(true);
                 AIAlert.GetComponent<Dialogue>().activationCircle.GetComponent<PuzzleActivation>().canOpenPuzzle = true;

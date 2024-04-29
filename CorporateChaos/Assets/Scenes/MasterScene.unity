@@ -5485,6 +5485,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &697341052 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1462062244, guid: cb30b7d1be7dc124684949c8c18e6d45, type: 3}
+  m_PrefabInstance: {fileID: 1771475730}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &708793331
 GameObject:
   m_ObjectHideFlags: 0
@@ -9245,7 +9250,11 @@ PrefabInstance:
       objectReference: {fileID: 1433975560}
     - target: {fileID: 7194873119074985868, guid: 8adfe0710aba5114c8af83b19d1962e3, type: 3}
       propertyPath: lines.Array.size
-      value: 8
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7194873119074985868, guid: 8adfe0710aba5114c8af83b19d1962e3, type: 3}
+      propertyPath: lines.Array.data[0]
+      value: Hello and welcome to Urban Inc. (space to continue)
       objectReference: {fileID: 0}
     - target: {fileID: 7194873119074985868, guid: 8adfe0710aba5114c8af83b19d1962e3, type: 3}
       propertyPath: lines.Array.data[2]
@@ -9261,15 +9270,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7194873119074985868, guid: 8adfe0710aba5114c8af83b19d1962e3, type: 3}
       propertyPath: lines.Array.data[5]
-      value: Ah, doesn't look like you have much time!
+      value: Underneath the timer is your task list.
       objectReference: {fileID: 0}
     - target: {fileID: 7194873119074985868, guid: 8adfe0710aba5114c8af83b19d1962e3, type: 3}
       propertyPath: lines.Array.data[6]
-      value: Anways, underneath the timer is your task list.
+      value: Complete them all so you don't get fired!
       objectReference: {fileID: 0}
     - target: {fileID: 7194873119074985868, guid: 8adfe0710aba5114c8af83b19d1962e3, type: 3}
       propertyPath: lines.Array.data[7]
-      value: Complete them all so you don't get fired!
+      value: Ah, doesn't look like you have much time!
       objectReference: {fileID: 0}
     - target: {fileID: 7194873119074985868, guid: 8adfe0710aba5114c8af83b19d1962e3, type: 3}
       propertyPath: lines.Array.data[8]
@@ -9281,7 +9290,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7194873119074985878, guid: 8adfe0710aba5114c8af83b19d1962e3, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -14569,6 +14578,10 @@ PrefabInstance:
       propertyPath: enemy
       value: 
       objectReference: {fileID: 862329179}
+    - target: {fileID: 2806188751030589399, guid: cb30b7d1be7dc124684949c8c18e6d45, type: 3}
+      propertyPath: exitPointDecrease
+      value: 
+      objectReference: {fileID: 697341052}
     - target: {fileID: 2806188751030589401, guid: cb30b7d1be7dc124684949c8c18e6d45, type: 3}
       propertyPath: m_LocalScale.x
       value: 3.7108343
