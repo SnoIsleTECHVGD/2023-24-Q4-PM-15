@@ -97,10 +97,7 @@ public class Chase : MonoBehaviour
         }
         if (vectorX + vectorY < 1)
         {
-            if (upSensor.GetComponent<WallSensing>().isTouchingWall)
-            {
-                vectorX = -1;
-            }
+            
         }
         //get animation direction
         animationDirection(vectorX, vectorY);
@@ -186,7 +183,7 @@ public class Chase : MonoBehaviour
         {
             GetComponent<Animator>().SetInteger("direction", 1);
         }
-        else if (x == 0 && y == 0)
+        else if (x + y < 1)
         {
             GetComponent<Animator>().SetInteger("direction", 3);
         }
