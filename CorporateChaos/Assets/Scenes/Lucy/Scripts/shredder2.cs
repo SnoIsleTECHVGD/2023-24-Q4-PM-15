@@ -10,17 +10,21 @@ public class shredder2 : MonoBehaviour
     public GameObject Paper;
     public float transparency = 1f;
     public bool fullyTransparent = false;
-    public int transparencyCounter = 1;
+    public int TransparencyCounter = 1;
+    public TaskPanels taskPanels;
+    public Victory Congrats;
+    public GameObject ShredderViz = null;
+    public bool ShredderVizOpened = true;
 
-  
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Paper"))
         {
             collision.GetComponent<Image>().color = new Color(1, 1, 1, transparency = transparency - 1f);
-            transparencyCounter = transparencyCounter + 1;
+            TransparencyCounter = TransparencyCounter + 1;
 
-            if (transparencyCounter == 1)
+            if (TransparencyCounter >= 1)
             {
                 fullyTransparent = true;
             }
@@ -33,15 +37,32 @@ public class shredder2 : MonoBehaviour
         }
         
     }
+    public void Endtask()
+    {
+        if (TransparencyCounter >= 7)
+        {
+            taskPanels.ExitTaskPanel();
+            Congrats.Congrats();
+            ShredderVizOpened = false;
+            SetShredderVizibility();
+        }
+    }
+    public void SetShredderVizibility()
+    {
+        if (ShredderViz != null)
+        {
+            ShredderViz.SetActive(ShredderVizOpened);
+        }
+    }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.CompareTag("Paper"))
         {
             collision.GetComponent<Image>().color = new Color(1, 1, 1, transparency = transparency - 1f);
-            transparencyCounter = transparencyCounter + 1;
+            TransparencyCounter = TransparencyCounter + 1;
 
-            if (transparencyCounter == 1)
+            if (TransparencyCounter >= 1)
             {
                 fullyTransparent = true;
             }
