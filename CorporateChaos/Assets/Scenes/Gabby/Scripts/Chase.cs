@@ -95,11 +95,13 @@ public class Chase : MonoBehaviour
         {
             vectorY = -1;
         }
-        if (targetInRoom == GetComponent<RoomTracker>().isInRoom && leftSensor.GetComponent<WallSensing>().isTouchingWall)
+        if (vectorX + vectorY < 1)
         {
-            vectorY = 1;
+            if (upSensor.GetComponent<WallSensing>().isTouchingWall)
+            {
+                vectorX = -1;
+            }
         }
-
         //get animation direction
         animationDirection(vectorX, vectorY);
 
@@ -119,7 +121,14 @@ public class Chase : MonoBehaviour
         }
         else if (targetInRoom == this.GetComponent<RoomTracker>().isInRoom)
         {
-            return target;
+            if (isInRoom.GetComponent<RoomArea>().hasPlayer == false)
+            {
+                return isInRoom.GetComponent<RoomArea>().exitPointSpecialCase;
+            }
+            else
+            {
+                return target;
+            }
         }
         else if (targetInRoom == 3.25f && this.GetComponent<RoomTracker>().isInRoom == 4)
         {
@@ -144,8 +153,6 @@ public class Chase : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            //gameOverScreen.SetActive(true);
-            //collision.gameObject.GetComponent<SpriteRenderer>().enabled = false;
             if (timer.GetComponent<Timer>().seconds > 0)
             {
             timer.GetComponent<Timer>().seconds--;

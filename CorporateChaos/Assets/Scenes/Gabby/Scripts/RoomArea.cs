@@ -9,14 +9,17 @@ public class RoomArea : MonoBehaviour
     public GameObject exitPointDecrease;
     public GameObject exitPointSpecial1;
     public GameObject exitPointSpecial2;
+    public GameObject exitPointSpecialCase;
     public float roomNum;
     public bool veto = false;
+    public bool hasPlayer;
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player" || collision.gameObject.tag == "Sensor")
+        if (collision.gameObject.tag == "Player")
         {
             collision.gameObject.GetComponent<RoomTracker>().isInRoom = roomNum;
+            hasPlayer = true;
         }
         else if (collision.gameObject.tag == "Enemy")
         {
@@ -31,6 +34,7 @@ public class RoomArea : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             collision.gameObject.GetComponent<RoomTracker>().isInRoom = roomNum;
+            hasPlayer = true;
         }
         else if (collision.gameObject.tag == "Enemy" && !veto)
         {
@@ -44,6 +48,10 @@ public class RoomArea : MonoBehaviour
         if (collision.gameObject.tag == "Enemy")
         {
             veto = false;
+        }
+        if (collision.gameObject.tag == "Player")
+        {
+            hasPlayer = false;
         }
     }
 
