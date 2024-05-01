@@ -9,6 +9,7 @@ public class CheckOff : MonoBehaviour
     void Start()
     {
         taskList.GetComponent<TaskList>().checklist[taskNum] = true;
+        taskList.GetComponent<TaskList>().tasks[taskNum].SetActive(true);
     }
 
 }
