@@ -8,6 +8,7 @@ public class Victory : MonoBehaviour
     public bool VictoryPanelOpened = false;
     public VendingMachine Win;
     public shredder2 Winn;
+    public MopPuzzleInnerWorkings Winnn;
 
     public void Congrats()
     {
@@ -18,6 +19,12 @@ public class Victory : MonoBehaviour
             
         }
         if (Winn.TransparencyCounter == 7) 
+        {
+            VictoryPanelOpened = true;
+            SetVictoryPanelVisibility();
+        }
+
+        if (Winn.fullyTransparent == true)
         {
             VictoryPanelOpened = true;
             SetVictoryPanelVisibility();

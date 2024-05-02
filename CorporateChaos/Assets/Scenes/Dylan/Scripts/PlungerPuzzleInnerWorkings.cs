@@ -23,24 +23,29 @@ public class PlungerPuzzleInnerWorkings : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     void OnTriggerEnter2D(Collider2D collision)
     {
         //Water.GetComponent<Renderer>().enabled = false;
-        Counter = Counter + 1;
-        GetComponent<ParticleSystem>().Play();
-
-        if (Counter == 10)
+        if (collision.CompareTag("Water"))
         {
-            unClogged = true;
+            Counter = Counter + 1;
+            GetComponent<ParticleSystem>().Play();
+
+            if (Counter == 10)
+            {
+                unClogged = true;
+            }
+
+            if (unClogged == true)
+            {
+                Debug.Log("toilet is unclogged ");
+                Destroy(collision.gameObject);
+            }
         }
 
-        if (unClogged == true)
-        {
-            Debug.Log("toilet is unclogged ");
-            Destroy(collision.gameObject);
-        }
+
     }
 }
