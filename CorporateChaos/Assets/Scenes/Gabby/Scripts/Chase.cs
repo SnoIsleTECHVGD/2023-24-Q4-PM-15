@@ -27,11 +27,6 @@ public class Chase : MonoBehaviour
         {
             targetInRoom = target.GetComponent<RoomTracker>().isInRoom;
             chase(selectTarget());
-            if (transform.rotation.z != 0)
-            {
-                Quaternion target = Quaternion.Euler(0, 0, 0);
-                transform.rotation = Quaternion.Slerp(transform.rotation, target, Time.deltaTime);
-            }
         }
         
     }
@@ -41,7 +36,6 @@ public class Chase : MonoBehaviour
         float vectorX = target.transform.position.x - transform.position.x;
         float vectorY = target.transform.position.y - transform.position.y;
 
-        Debug.Log(target);
 
         if (rightSensor.GetComponent<WallSensing>().isTouchingWall && vectorX > 0)
         {
@@ -95,9 +89,33 @@ public class Chase : MonoBehaviour
         {
             vectorY = -1;
         }
-        if (vectorX + vectorY < 1)
+        if (vectorX + vectorY < 1 && (leftSensor.GetComponent<WallSensing>().isTouchingWall || rightSensor.GetComponent<WallSensing>().isTouchingWall || upSensor.GetComponent<WallSensing>().isTouchingWall || downSensor.GetComponent<WallSensing>().isTouchingWall))
         {
-            
+            Vector2 direction = (target.transform.position - this.transform.position).normalized;
+            RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, direction);
+            Debug.DrawRay(transform.position, direction, Color.red);
+            bool hitObstacle = false;
+
+            foreach (RaycastHit2D hit in hits)
+            {
+                if (hit.collider.tag == "Obstacle")
+                {
+                    hitObstacle = true;
+                    break;
+                }
+            }
+
+            if (hitObstacle)
+            {
+                if (leftSensor.GetComponent<WallSensing>().isTouchingWall || rightSensor.GetComponent<WallSensing>().isTouchingWall)
+                {
+                    vectorY = target.transform.position.x - transform.position.x;
+                }
+                if (upSensor.GetComponent<WallSensing>().isTouchingWall || downSensor.GetComponent<WallSensing>().isTouchingWall)
+                {
+                    vectorX = target.transform.position.y - transform.position.y;
+                }
+            }
         }
         //get animation direction
         animationDirection(vectorX, vectorY);
@@ -118,7 +136,7 @@ public class Chase : MonoBehaviour
         }
         else if (targetInRoom == this.GetComponent<RoomTracker>().isInRoom)
         {
-            if (isInRoom.GetComponent<RoomArea>().hasPlayer == false)
+            if (isInRoom.GetComponent<RoomArea>().hasPlayer == false && isInRoom.GetComponent<RoomArea>().exitPointSpecialCase != null)
             {
                 return isInRoom.GetComponent<RoomArea>().exitPointSpecialCase;
             }
@@ -175,7 +193,7 @@ public class Chase : MonoBehaviour
         {
             GetComponent<Animator>().SetInteger("direction", 0);
         }
-        else if (posY > posX && GetComponent<Animator>().GetInteger("direction") != 2)
+        else if (y > 0 && posY > posX && GetComponent<Animator>().GetInteger("direction") != 2)
         {
             GetComponent<Animator>().SetInteger("direction", 2);
         }
@@ -183,10 +201,10 @@ public class Chase : MonoBehaviour
         {
             GetComponent<Animator>().SetInteger("direction", 1);
         }
-        else if (x + y < 1)
-        {
-            GetComponent<Animator>().SetInteger("direction", 3);
-        }
+        //else if (x + y < 1)
+        //{
+            //GetComponent<Animator>().SetInteger("direction", 3);
+        //}
 
         if (x < 0 && posX > posY)
         {

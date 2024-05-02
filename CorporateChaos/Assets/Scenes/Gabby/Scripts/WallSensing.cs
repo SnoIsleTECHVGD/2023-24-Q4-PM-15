@@ -19,7 +19,7 @@ public class WallSensing : MonoBehaviour
     }
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Wall")
+        if (collision.gameObject.tag == "Wall" || collision.gameObject.tag == "Obstacle")
         {
             isTouchingWall = true;
         }
@@ -31,7 +31,7 @@ public class WallSensing : MonoBehaviour
 
     public void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Wall")
+        if (collision.gameObject.tag == "Wall" || collision.gameObject.tag == "Obstacle")
         {
             isTouchingWall = true;
         }
@@ -43,7 +43,7 @@ public class WallSensing : MonoBehaviour
 
     public void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Wall")
+        if (collision.gameObject.tag == "Wall" || collision.gameObject.tag == "Obstacle")
         {
             isTouchingWall = false;
         }
