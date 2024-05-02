@@ -34,6 +34,11 @@ public class shredder2 : MonoBehaviour
                 Debug.Log("Paper is fully transparent");
                 Destroy(collision.gameObject);
             }
+
+            GetComponent<ParticleSystem>().Play();
+
+            Endtask();
+
         }
         
     }
