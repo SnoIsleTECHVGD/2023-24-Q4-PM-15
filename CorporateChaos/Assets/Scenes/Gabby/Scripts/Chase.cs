@@ -109,11 +109,11 @@ public class Chase : MonoBehaviour
             {
                 if (leftSensor.GetComponent<WallSensing>().isTouchingWall || rightSensor.GetComponent<WallSensing>().isTouchingWall)
                 {
-                    vectorY = target.transform.position.x - transform.position.x;
+                    vectorY = Mathf.Abs(target.transform.position.x - transform.position.x);
                 }
                 if (upSensor.GetComponent<WallSensing>().isTouchingWall || downSensor.GetComponent<WallSensing>().isTouchingWall)
                 {
-                    vectorX = target.transform.position.y - transform.position.y;
+                    vectorX = Mathf.Abs(target.transform.position.y - transform.position.y);
                 }
             }
         }
