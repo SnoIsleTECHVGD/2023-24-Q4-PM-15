@@ -1255,7 +1255,8 @@ PrefabInstance:
       propertyPath: taskList
       value: 
       objectReference: {fileID: 1585757948}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2272749641829781399, guid: 06d273c3d1f36954f9e7831838641beb, type: 3}
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 06d273c3d1f36954f9e7831838641beb, type: 3}
 --- !u!1001 &2806188750576768049
@@ -1870,7 +1871,8 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1877709864, guid: 38cfa9d48eb9be34e865948965d2b3d9, type: 3}
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 38cfa9d48eb9be34e865948965d2b3d9, type: 3}
 --- !u!1001 &6010512353133463752
