@@ -24,7 +24,7 @@ public class Victory : MonoBehaviour
             SetVictoryPanelVisibility();
         }
 
-        if (Winn.fullyTransparent == true)
+        if (Winnn.fullyTransparent == true)
         {
             VictoryPanelOpened = true;
             SetVictoryPanelVisibility();
