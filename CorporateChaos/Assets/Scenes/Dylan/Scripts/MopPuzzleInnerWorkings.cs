@@ -12,6 +12,8 @@ public class MopPuzzleInnerWorkings : MonoBehaviour
     public int transparencyCounter = 0;
     public TaskPanels taskPanels;
     public Victory Congrats;
+    public GameObject SpillViz = null;
+    public bool SpillVizOpened = true;
 
     private void OnMouseDown()
     {
@@ -40,6 +42,7 @@ public class MopPuzzleInnerWorkings : MonoBehaviour
             {
                 Debug.Log("water is fully transparent");
                 Destroy(collision.gameObject);
+                EndTask();
             }
         }
     }
@@ -62,6 +65,24 @@ public class MopPuzzleInnerWorkings : MonoBehaviour
                 Debug.Log("water is fully transparent");
                 Destroy(collision.gameObject);
             }
+        }
+    }
+
+    public void EndTask()
+    {
+        if (fullyTransparent == true)
+        {
+            taskPanels.ExitTaskPanel();
+            Congrats.Congrats();
+            SpillVizOpened = false;
+            SetSpillVizibility();
+        }
+    }
+    public void SetSpillVizibility()
+    {
+        if (SpillViz != null)
+        {
+            SpillViz.SetActive(SpillVizOpened);
         }
     }
 }
