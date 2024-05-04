@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TaskList : MonoBehaviour
 {
@@ -26,7 +27,7 @@ public class TaskList : MonoBehaviour
         if (tasksDone == checklist.Count)
         {
             Debug.Log("All tasks done!!");
-            win.SetActive(true);
+            SceneManager.LoadScene("WinScreen");
         }
     }
 }
