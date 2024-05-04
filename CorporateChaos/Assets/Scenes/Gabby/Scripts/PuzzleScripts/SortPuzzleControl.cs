@@ -20,10 +20,10 @@ public class SortPuzzleControl : MonoBehaviour
     {
         i = 0;
 
-        spotShift1 = 2;
-        spotShift2 = 2;
-        spotShift3 = 2;
-        spotShift4 = 2;
+        spotShift1 = 4;
+        spotShift2 = 4;
+        spotShift3 = 4;
+        spotShift4 = 4;
     }
 
     // Update is called once per frame

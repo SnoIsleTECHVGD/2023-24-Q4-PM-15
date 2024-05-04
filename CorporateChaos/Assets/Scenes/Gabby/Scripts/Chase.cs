@@ -89,7 +89,7 @@ public class Chase : MonoBehaviour
         {
             vectorY = -1;
         }
-        if (vectorX + vectorY < 1 && (leftSensor.GetComponent<WallSensing>().isTouchingWall || rightSensor.GetComponent<WallSensing>().isTouchingWall || upSensor.GetComponent<WallSensing>().isTouchingWall || downSensor.GetComponent<WallSensing>().isTouchingWall))
+        if (Mathf.Abs(vectorX) + Mathf.Abs(vectorY) < 0.5f && (leftSensor.GetComponent<WallSensing>().isTouchingWall || rightSensor.GetComponent<WallSensing>().isTouchingWall || upSensor.GetComponent<WallSensing>().isTouchingWall || downSensor.GetComponent<WallSensing>().isTouchingWall))
         {
             Vector2 direction = (target.transform.position - this.transform.position).normalized;
             RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, direction);
