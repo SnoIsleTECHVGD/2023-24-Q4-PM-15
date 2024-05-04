@@ -73,7 +73,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 6
   m_Sprite: {fileID: -5177388603050735206, guid: 71ebafeef3c03457483266a33ab2b270, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
@@ -163,7 +163,7 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 7
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &4651633676057062396
 MonoBehaviour:
@@ -291,7 +291,7 @@ Transform:
   m_Children:
   - {fileID: 5755612137643903555}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4651633676196391054
 SpriteRenderer:
@@ -375,6 +375,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canOpenPuzzle: 0
   puzzleScreen: {fileID: 0}
+  canShowButtonPrompt: 0
 --- !u!50 &4651633676196391048
 Rigidbody2D:
   serializedVersion: 4

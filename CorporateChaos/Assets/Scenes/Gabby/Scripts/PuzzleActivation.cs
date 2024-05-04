@@ -20,7 +20,10 @@ public class PuzzleActivation : MonoBehaviour
         else if (collision.gameObject.tag == "Player" && !canShowButtonPrompt)
         {
             canOpenPuzzle = true;
-            puzzleScreen.SetActive(true);
+            if (puzzleScreen != null)
+            {
+                puzzleScreen.SetActive(true);
+            }
         }
     }
 
@@ -32,7 +35,10 @@ public class PuzzleActivation : MonoBehaviour
             {
                 transform.GetChild(0).gameObject.SetActive(false);
             }
-            puzzleScreen.SetActive(false);
+            if (puzzleScreen != null)
+            {
+                puzzleScreen.SetActive(false);
+            }
             canOpenPuzzle = false;
         }
     }
@@ -41,7 +47,10 @@ public class PuzzleActivation : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E) && canOpenPuzzle)
         {
-            puzzleScreen.SetActive(true);
+            if (puzzleScreen != null)
+            {
+                puzzleScreen.SetActive(true);
+            }
         }
         if (!canOpenPuzzle && canShowButtonPrompt)
         {
