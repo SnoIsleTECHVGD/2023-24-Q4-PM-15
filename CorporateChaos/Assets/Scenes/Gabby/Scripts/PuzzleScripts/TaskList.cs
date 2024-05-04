@@ -9,6 +9,7 @@ public class TaskList : MonoBehaviour
 {
     public List<bool> checklist;
     public List<GameObject> tasks;
+    public List<GameObject> activationCircles;
     public GameObject win;
     public int tasksDone;
 

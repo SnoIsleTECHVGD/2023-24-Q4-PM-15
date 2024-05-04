@@ -17,7 +17,6 @@ public class SortPuzzleControl : MonoBehaviour
     public int spotShift4;
 
     public List<OverworldTaskVisual> overworldObjects;
-    public GameObject activationCircle;
     // Start is called before the first frame update
     void Start()
     {
@@ -73,7 +72,6 @@ public class SortPuzzleControl : MonoBehaviour
                 {
                     item.changeVisibility();
                 }
-                activationCircle.SetActive(false);
                 taskList.checkTask(0);
                 Congrats.Congrats();
                 check = false;
