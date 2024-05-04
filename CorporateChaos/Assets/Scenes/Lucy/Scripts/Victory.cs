@@ -9,6 +9,8 @@ public class Victory : MonoBehaviour
     public VendingMachine Win;
     public shredder2 Winn;
     public MopPuzzleInnerWorkings Winnn;
+    public SortPuzzleControl Winnnn;
+    public TrashCanMove Winnnnn;
 
     public void Congrats()
     {
@@ -29,9 +31,19 @@ public class Victory : MonoBehaviour
             VictoryPanelOpened = true;
             SetVictoryPanelVisibility();
         }
+        if (Winnnn.taskComplete.activeSelf)
+        {
+            VictoryPanelOpened = true;
+            SetVictoryPanelVisibility();
+        }
+        if (Winnnnn.caughtCount > 10)
+        {
+            VictoryPanelOpened = true;
+            SetVictoryPanelVisibility();
+        }
     }
     public void SetVictoryPanelVisibility()
-    {
+    {      
        if (VictoryPanel != null)
        {
             VictoryPanel.SetActive(VictoryPanelOpened);
@@ -39,6 +51,7 @@ public class Victory : MonoBehaviour
     }
     public void ExitVictoryPanel()
     {
+
         VictoryPanelOpened = false;
         SetVictoryPanelVisibility();
     }

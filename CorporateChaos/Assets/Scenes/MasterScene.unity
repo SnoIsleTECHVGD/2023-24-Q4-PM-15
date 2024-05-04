@@ -2076,7 +2076,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1654084919716418511, guid: 82c7fbfefef27bf4c8541855f4915e5d, type: 3}
       propertyPath: tasksNeeded
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1654084919716418512, guid: 82c7fbfefef27bf4c8541855f4915e5d, type: 3}
       propertyPath: m_Name
@@ -4842,7 +4842,7 @@ GameObject:
   - component: {fileID: 513549656}
   m_Layer: 0
   m_Name: Square (12)
-  m_TagString: Wall
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5678,7 +5678,7 @@ GameObject:
   - component: {fileID: 579863258}
   m_Layer: 0
   m_Name: Square (37)
-  m_TagString: Wall
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7139,6 +7139,8 @@ MonoBehaviour:
   Win: {fileID: 1531593535}
   Winn: {fileID: 2067309193}
   Winnn: {fileID: 1747591842}
+  Winnnn: {fileID: 1300861822}
+  Winnnnn: {fileID: 2051724302}
 --- !u!114 &632493404
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7639,7 +7641,7 @@ GameObject:
   - component: {fileID: 702653223}
   m_Layer: 0
   m_Name: Square (39)
-  m_TagString: Wall
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8056,7 +8058,7 @@ GameObject:
   - component: {fileID: 746306654}
   m_Layer: 0
   m_Name: Square (63)
-  m_TagString: Wall
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8896,7 +8898,7 @@ GameObject:
   - component: {fileID: 812386019}
   m_Layer: 0
   m_Name: Square (29)
-  m_TagString: Wall
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9451,7 +9453,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 858924769}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 95.09, y: 92.41, z: 0}
+  m_LocalPosition: {x: 64.07, y: 109.61, z: 0}
   m_LocalScale: {x: 0.17, y: 0.17, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13382,7 +13384,7 @@ GameObject:
   - component: {fileID: 1208685255}
   m_Layer: 0
   m_Name: Square (6)
-  m_TagString: Wall
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14488,6 +14490,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5114255111792747784, guid: 38cfa9d48eb9be34e865948965d2b3d9, type: 3}
   m_PrefabInstance: {fileID: 2060501537}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1300861822 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5114255111792747787, guid: 38cfa9d48eb9be34e865948965d2b3d9, type: 3}
+  m_PrefabInstance: {fileID: 2060501537}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1300861816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 616094946f51797499f6ff86be9012db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1302402399
 GameObject:
   m_ObjectHideFlags: 0
@@ -14572,6 +14585,18 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 1804291350}
     m_Modifications:
+    - target: {fileID: 2272749641163641968, guid: 06d273c3d1f36954f9e7831838641beb, type: 3}
+      propertyPath: Congrats
+      value: 
+      objectReference: {fileID: 632493403}
+    - target: {fileID: 2272749641163641968, guid: 06d273c3d1f36954f9e7831838641beb, type: 3}
+      propertyPath: taskList
+      value: 
+      objectReference: {fileID: 2051307670}
+    - target: {fileID: 2272749641163641968, guid: 06d273c3d1f36954f9e7831838641beb, type: 3}
+      propertyPath: completedScreen
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 2272749641420889946, guid: 06d273c3d1f36954f9e7831838641beb, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -14705,7 +14730,7 @@ GameObject:
   - component: {fileID: 1314290722}
   m_Layer: 0
   m_Name: Square (40)
-  m_TagString: Wall
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14821,7 +14846,7 @@ GameObject:
   - component: {fileID: 1340879008}
   m_Layer: 0
   m_Name: Square (38)
-  m_TagString: Wall
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15203,7 +15228,7 @@ GameObject:
   - component: {fileID: 1377232103}
   m_Layer: 0
   m_Name: Square (7)
-  m_TagString: Wall
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17449,7 +17474,7 @@ GameObject:
   - component: {fileID: 1596453053}
   m_Layer: 0
   m_Name: Square (10)
-  m_TagString: Wall
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18007,7 +18032,7 @@ GameObject:
   - component: {fileID: 1622170313}
   m_Layer: 0
   m_Name: Square (4)
-  m_TagString: Wall
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19156,7 +19181,7 @@ GameObject:
   - component: {fileID: 1706928879}
   m_Layer: 0
   m_Name: Square (30)
-  m_TagString: Wall
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20385,6 +20410,10 @@ PrefabInstance:
     - target: {fileID: 2806188751634001012, guid: cb30b7d1be7dc124684949c8c18e6d45, type: 3}
       propertyPath: m_LocalPosition.y
       value: 119.5982
+      objectReference: {fileID: 0}
+    - target: {fileID: 2806188751634001013, guid: cb30b7d1be7dc124684949c8c18e6d45, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2806188751871532615, guid: cb30b7d1be7dc124684949c8c18e6d45, type: 3}
       propertyPath: m_IsActive
@@ -22398,7 +22427,7 @@ GameObject:
   - component: {fileID: 2011454497}
   m_Layer: 0
   m_Name: Square (33)
-  m_TagString: Wall
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22884,11 +22913,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SortPosters: {fileID: 1300861816}
-  ThrowTrash: {fileID: 926161936}
+  trashCanvas: {fileID: 926161936}
+  ThrowTrash: {fileID: 2051724298}
   FixVending: {fileID: 1531593534}
   MopSpill: {fileID: 1747591838}
   ShredPapers: {fileID: 2067309189}
-  victory: {fileID: 892784344}
+  mainCamera: {fileID: 632493397}
+  Congrats: {fileID: 632493403}
+--- !u!1 &2051724298 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2272749641163641982, guid: 06d273c3d1f36954f9e7831838641beb, type: 3}
+  m_PrefabInstance: {fileID: 1306904477}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2051724302 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2272749641163641968, guid: 06d273c3d1f36954f9e7831838641beb, type: 3}
+  m_PrefabInstance: {fileID: 1306904477}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2051724298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1128c912b922d6a418367b61abdcf05e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2060501537
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22989,6 +23036,14 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5114255111792747787, guid: 38cfa9d48eb9be34e865948965d2b3d9, type: 3}
+      propertyPath: Congrats
+      value: 
+      objectReference: {fileID: 632493403}
+    - target: {fileID: 5114255111792747787, guid: 38cfa9d48eb9be34e865948965d2b3d9, type: 3}
+      propertyPath: taskList
+      value: 
+      objectReference: {fileID: 2051307670}
     - target: {fileID: 5114255111792747788, guid: 38cfa9d48eb9be34e865948965d2b3d9, type: 3}
       propertyPath: m_Name
       value: Sort Posters

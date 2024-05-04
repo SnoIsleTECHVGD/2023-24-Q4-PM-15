@@ -5,10 +5,13 @@ using UnityEngine;
 public class TrashCanMove : MonoBehaviour
 {
     public int caughtCount = 0;
-    public GameObject completedScreen;
     public GameObject trashSpawner;
     public GameObject boundaryRight;
     public GameObject boundaryLeft;
+
+    public bool check = true;
+    public Victory Congrats;
+    public CheckOff taskList;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,12 +25,16 @@ public class TrashCanMove : MonoBehaviour
         {
             transform.position = new Vector3(Input.mousePosition.x, this.transform.position.y, 0);
         }
-        if (caughtCount > 10)
+        if (caughtCount > 10 && check)
         {
-            completedScreen.SetActive(true);
             trashSpawner.GetComponent<SpawnTrash>().canSpawn = false;
             trashSpawner.GetComponent<SpawnTrash>().enabled = false;
             trashSpawner.SetActive(false);
+            taskList.checkTask(1);
+            Congrats.Congrats();
+            check = false;
+            this.transform.parent.gameObject.SetActive(false);
+
         }
     }
 }

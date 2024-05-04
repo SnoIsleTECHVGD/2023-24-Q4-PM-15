@@ -5,13 +5,15 @@ using UnityEngine;
 public class CheckOff : MonoBehaviour
 {
     public GameObject SortPosters;
+    public GameObject trashCanvas;
     public GameObject ThrowTrash;
     public GameObject FixVending;
     public GameObject MopSpill;
     //public GameObject UnClogToilet;
     public GameObject ShredPapers;
 
-    public GameObject victory;
+    public GameObject mainCamera;
+    public Victory Congrats;
     void Start()
     {
         //taskList.GetComponent<TaskList>().checklist[taskNum] = true;
@@ -20,20 +22,6 @@ public class CheckOff : MonoBehaviour
 
     public void Update()
     {
-        //if (SortPosters.GetComponent<SortPuzzleControl>().taskComplete.active)
-        //{
-          //  checkTask(0);
-            //SortPosters.SetActive(false);
-            //victory.SetActive(true);
-        //}
-        if (ThrowTrash.GetComponent<TrashCanMove>().caughtCount > 10)
-        {
-            checkTask(1);
-            ThrowTrash.GetComponent<TrashCanMove>().trashSpawner.GetComponent<SpawnTrash>().canSpawn = false;
-            ThrowTrash.GetComponent<TrashCanMove>().trashSpawner.GetComponent<SpawnTrash>().enabled = false;
-            ThrowTrash.SetActive(false);
-            victory.SetActive(true);
-        }
         if (FixVending.GetComponent<VendingMachine>().CurrentKickCount == 20)
         {
             checkTask(2);

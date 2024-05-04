@@ -7,6 +7,9 @@ public class SortPuzzleControl : MonoBehaviour
     public List<GameObject> items;
     public GameObject taskComplete;
     public int i;
+    public bool check = true;
+    public CheckOff taskList;
+    public Victory Congrats;
 
     public int spotShift1;
     public int spotShift2;
@@ -61,6 +64,13 @@ public class SortPuzzleControl : MonoBehaviour
         else
         {
             taskComplete.SetActive(true);
+            if (check)
+            {
+                taskList.checkTask(0);
+                Congrats.Congrats();
+                check = false;
+                this.gameObject.SetActive(false);
+            }
         }
         
     }
