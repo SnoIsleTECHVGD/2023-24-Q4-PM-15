@@ -44,5 +44,6 @@ public class CheckOff : MonoBehaviour
     {
         GetComponent<TaskList>().checklist[taskNum] = true;
         GetComponent<TaskList>().tasks[taskNum].SetActive(true);
+        GetComponent<TaskList>().activationCircles[taskNum].SetActive(false);
     }
 }

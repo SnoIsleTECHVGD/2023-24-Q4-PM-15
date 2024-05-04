@@ -14,7 +14,6 @@ public class TrashCanMove : MonoBehaviour
     public CheckOff taskList;
 
     public List<OverworldTaskVisual> objects;
-    public GameObject activationCircle;
     // Start is called before the first frame update
     void Start()
     {
@@ -35,7 +34,6 @@ public class TrashCanMove : MonoBehaviour
                 item.changeVisibility();
 
             }
-            activationCircle.SetActive(false);
             trashSpawner.GetComponent<SpawnTrash>().canSpawn = false;
             trashSpawner.GetComponent<SpawnTrash>().enabled = false;
             trashSpawner.SetActive(false);
