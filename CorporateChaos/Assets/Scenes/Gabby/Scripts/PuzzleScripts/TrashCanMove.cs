@@ -12,6 +12,9 @@ public class TrashCanMove : MonoBehaviour
     public bool check = true;
     public Victory Congrats;
     public CheckOff taskList;
+
+    public List<OverworldTaskVisual> objects;
+    public GameObject activationCircle;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +30,12 @@ public class TrashCanMove : MonoBehaviour
         }
         if (caughtCount > 10 && check)
         {
+            foreach(OverworldTaskVisual item in objects)
+            {
+                item.changeVisibility();
+
+            }
+            activationCircle.SetActive(false);
             trashSpawner.GetComponent<SpawnTrash>().canSpawn = false;
             trashSpawner.GetComponent<SpawnTrash>().enabled = false;
             trashSpawner.SetActive(false);

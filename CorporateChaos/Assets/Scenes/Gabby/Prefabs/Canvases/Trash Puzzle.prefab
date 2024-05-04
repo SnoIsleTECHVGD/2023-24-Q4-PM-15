@@ -27,7 +27,7 @@ RectTransform:
   m_GameObject: {fileID: 2272749639930566760}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 34.566643, y: 31.890972, z: 1.9737997}
+  m_LocalScale: {x: 31.542406, y: 31.890972, z: 1.9737997}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2272749641708673500}
@@ -326,6 +326,8 @@ MonoBehaviour:
   check: 1
   Congrats: {fileID: 0}
   taskList: {fileID: 0}
+  objects: []
+  activationCircle: {fileID: 0}
 --- !u!61 &2272749641163641972
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -493,7 +495,7 @@ RectTransform:
   m_GameObject: {fileID: 2272749641536809835}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 1.3762499}
+  m_LocalScale: {x: 2.70006, y: 3, z: 1.3762499}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2272749641708673500}
@@ -501,7 +503,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 657, y: 333}
+  m_AnchoredPosition: {x: 602, y: 333}
   m_SizeDelta: {x: 44.4194, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2272749641536809839

@@ -85,10 +85,6 @@ public class Chase : MonoBehaviour
         {
             vectorX = -1;
         }
-        if (leftSensor.GetComponent<WallSensing>().isTouchingWall && rightSensor.GetComponent<WallSensing>().isTouchingWall && upSensor.GetComponent<WallSensing>().isTouchingWall)
-        {
-            vectorY = -1;
-        }
         if (Mathf.Abs(vectorX) + Mathf.Abs(vectorY) < 0.5f && (leftSensor.GetComponent<WallSensing>().isTouchingWall || rightSensor.GetComponent<WallSensing>().isTouchingWall || upSensor.GetComponent<WallSensing>().isTouchingWall || downSensor.GetComponent<WallSensing>().isTouchingWall))
         {
             Vector2 direction = (target.transform.position - this.transform.position).normalized;
