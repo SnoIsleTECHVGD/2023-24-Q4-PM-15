@@ -16,6 +16,7 @@ public class Sort : MonoBehaviour
     public GameObject spot2;
     public GameObject spot3;
     public GameObject spot4;
+    public SortPuzzleControl controller;
     // Start is called before the first frame update
     void Start()
     {
@@ -120,5 +121,28 @@ public class Sort : MonoBehaviour
         transform.Translate(-5, 0, 0);
         yield return new WaitForSeconds(0.1f);
         transform.Translate(5, 0, 0);
+    }
+
+    public void callSort()
+    {
+        if (isSorted)
+        {
+            if (type == 1)
+            {
+                controller.sortOption1();
+            }
+            else if (type == 2)
+            {
+                controller.sortOption2();
+            }
+            else if (type == 3)
+            {
+                controller.sortOption3();
+            }
+            else if (type == 4)
+            {
+                controller.sortOption4();
+            }
+        }
     }
 }
