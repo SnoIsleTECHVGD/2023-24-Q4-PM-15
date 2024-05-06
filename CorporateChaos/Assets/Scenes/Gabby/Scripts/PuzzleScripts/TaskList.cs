@@ -28,7 +28,7 @@ public class TaskList : MonoBehaviour
         if (tasksDone == checklist.Count)
         {
             Debug.Log("All tasks done!!");
-            SceneManager.LoadScene("WinScreen");
+            SceneManager.LoadScene("WinScene");
         }
     }
 }
