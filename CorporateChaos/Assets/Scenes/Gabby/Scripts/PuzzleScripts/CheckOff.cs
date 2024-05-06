@@ -9,7 +9,7 @@ public class CheckOff : MonoBehaviour
     public GameObject ThrowTrash;
     public GameObject FixVending;
     public GameObject MopSpill;
-    //public GameObject UnClogToilet;
+    public GameObject UnClogToilet;
     public GameObject ShredPapers;
 
     public GameObject mainCamera;
@@ -30,10 +30,10 @@ public class CheckOff : MonoBehaviour
         {
             checkTask(3);
         }
-        //  if (UnClogToilet)
-        //  {
-        //      checkTask(4);
-        //  }
+          if (UnClogToilet.GetComponent<PlungerPuzzleInnerWorkings>().unClogged == true)
+          {
+              checkTask(4);
+          }
         if (ShredPapers.GetComponent<shredder2>().TransparencyCounter == 7)
         {
             checkTask(5);

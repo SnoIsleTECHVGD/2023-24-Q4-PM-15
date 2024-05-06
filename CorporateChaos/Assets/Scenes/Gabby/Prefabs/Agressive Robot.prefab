@@ -223,7 +223,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &9074205542652391685
 Transform:
   m_ObjectHideFlags: 0
@@ -365,8 +365,10 @@ MonoBehaviour:
   isInRoom: {fileID: 0}
   gameOverScreen: {fileID: 0}
   timer: {fileID: 0}
+  stuck: {fileID: 0}
   targetInRoom: 0
   speed: 2.5
+  isStuck: 0
 --- !u!95 &1609289860
 Animator:
   serializedVersion: 4

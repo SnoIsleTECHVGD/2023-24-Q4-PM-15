@@ -402,6 +402,37 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1749349473, guid: 9d022ff1275da5947979be5cf2fb3037, type: 3}
   m_PrefabInstance: {fileID: 2996455802869197546}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1246800007
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1246800008}
+  m_Layer: 0
+  m_Name: ExitPoint (Stuck)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1246800008
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1246800007}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 11.89, y: -2.19, z: -0.09359306}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 502916882}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1270329334 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1462969458861170989, guid: cb30b7d1be7dc124684949c8c18e6d45, type: 3}
@@ -1404,6 +1435,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2806188752273454839, guid: cb30b7d1be7dc124684949c8c18e6d45, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1670305080}
+    - targetCorrespondingSourceObject: {fileID: 2806188752273454839, guid: cb30b7d1be7dc124684949c8c18e6d45, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1246800008}
   m_SourcePrefab: {fileID: 100100000, guid: cb30b7d1be7dc124684949c8c18e6d45, type: 3}
 --- !u!1001 &2996455802869197546
 PrefabInstance:
@@ -2110,11 +2144,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6167152610417890883, guid: a1651521e03d14047a45b7c77fe23189, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.21
+      value: -12.09
       objectReference: {fileID: 0}
     - target: {fileID: 6167152610417890883, guid: a1651521e03d14047a45b7c77fe23189, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -11.98
+      value: -27.21
       objectReference: {fileID: 0}
     - target: {fileID: 6167152610417890883, guid: a1651521e03d14047a45b7c77fe23189, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2377,6 +2411,10 @@ PrefabInstance:
       propertyPath: setY
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 9074205542652391680, guid: d203e462f3323e44eab3bdf83adc70ed, type: 3}
+      propertyPath: stuck
+      value: 
+      objectReference: {fileID: 1246800007}
     - target: {fileID: 9074205542652391680, guid: d203e462f3323e44eab3bdf83adc70ed, type: 3}
       propertyPath: timer
       value: 

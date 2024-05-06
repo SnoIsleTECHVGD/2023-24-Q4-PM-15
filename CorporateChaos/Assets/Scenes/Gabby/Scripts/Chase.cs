@@ -15,9 +15,11 @@ public class Chase : MonoBehaviour
     public GameObject isInRoom;
     public GameObject gameOverScreen;
     public GameObject timer;
+    public GameObject stuck;
     
     public float targetInRoom;
     public float speed;
+    public bool isStuck;
 
     // Update is called once per frame
     void Update()
@@ -33,6 +35,7 @@ public class Chase : MonoBehaviour
 
     public void chase(GameObject target)
     {
+        isStuck = false;
         float vectorX = target.transform.position.x - transform.position.x;
         float vectorY = target.transform.position.y - transform.position.y;
 
@@ -87,6 +90,7 @@ public class Chase : MonoBehaviour
         }
         if (Mathf.Abs(vectorX) + Mathf.Abs(vectorY) < 1 && (leftSensor.GetComponent<WallSensing>().isTouchingWall || rightSensor.GetComponent<WallSensing>().isTouchingWall || upSensor.GetComponent<WallSensing>().isTouchingWall || downSensor.GetComponent<WallSensing>().isTouchingWall))
         {
+            isStuck = true;
             Vector2 direction = (target.transform.position - this.transform.position).normalized;
             RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, direction);
             Debug.DrawRay(transform.position, direction, Color.red);
@@ -152,6 +156,14 @@ public class Chase : MonoBehaviour
         else if (targetInRoom == 2.5f && this.GetComponent<RoomTracker>().isInRoom == 3)
         {
             return isInRoom.GetComponent<RoomArea>().exitPointSpecial1;
+        }
+        else if (isInRoom.GetComponent<RoomArea>().roomNum == 2.5f && isStuck)
+        {
+            return stuck;
+        }
+        else if (Mathf.Abs(transform.position.x - stuck.transform.position.x) < 1 && Mathf.Abs(transform.position.y - stuck.transform.position.y) < 1)
+        {
+            return isInRoom.GetComponent<RoomArea>().exitPointIncrease;
         }
         else
         {
