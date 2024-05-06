@@ -27,4 +27,9 @@ public class ChangeScene : MonoBehaviour
         SceneManager.LoadScene("Credits");
         SFXmanager.instance.PlaySFX(popClean, transform, 1f);
     }
+    public void Opening()
+    {
+        SceneManager.LoadScene("Opening");
+        SFXmanager.instance.PlaySFX(popClean, transform, 1f);
+    }
 }
