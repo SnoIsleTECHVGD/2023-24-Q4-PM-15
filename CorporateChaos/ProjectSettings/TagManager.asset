@@ -3,7 +3,16 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Trash
+  - Wall
+  - Paper
+  - Obstacle
+  - Water
+  - Robot
+  - Enemy
+  - Sensor
+  - Toilet
   layers:
   - Default
   - TransparentFX

@@ -11,6 +11,7 @@ public class Victory : MonoBehaviour
     public MopPuzzleInnerWorkings Winnn;
     public SortPuzzleControl Winnnn;
     public TrashCanMove Winnnnn;
+    public PlungerPuzzleInnerWorkings Winnnnnn;
 
     public void Congrats()
     {
@@ -37,6 +38,12 @@ public class Victory : MonoBehaviour
             SetVictoryPanelVisibility();
         }
         if (Winnnnn.caughtCount > 10)
+        {
+            VictoryPanelOpened = true;
+            SetVictoryPanelVisibility();
+        }
+
+        if (Winnnnnn.unClogged == true)
         {
             VictoryPanelOpened = true;
             SetVictoryPanelVisibility();

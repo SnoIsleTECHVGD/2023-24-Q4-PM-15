@@ -8,6 +8,10 @@ public class PlungerPuzzleInnerWorkings : MonoBehaviour
     public GameObject Toilet;
     public bool unClogged = false;
     public int Counter = 0;
+    public TaskPanels taskPanels;
+    public Victory Congrats;
+    public GameObject ToiletViz = null;
+    public bool ToiletVizOpened = true;
 
     private void OnMouseDown()
     {
@@ -29,10 +33,10 @@ public class PlungerPuzzleInnerWorkings : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collision)
     {
         //Water.GetComponent<Renderer>().enabled = false;
-        if (collision.CompareTag("Water"))
+        if (collision.CompareTag("Toilet"))
         {
             Counter = Counter + 1;
-            GetComponent<ParticleSystem>().Play();
+            
 
             if (Counter == 10)
             {
@@ -43,9 +47,30 @@ public class PlungerPuzzleInnerWorkings : MonoBehaviour
             {
                 Debug.Log("toilet is unclogged ");
                 Destroy(collision.gameObject);
+                EndTask();
             }
+
+            
         }
 
 
+    }
+
+    public void EndTask()
+    {
+        if (unClogged == true)
+        {
+            taskPanels.ExitTaskPanel();
+            Congrats.Congrats();
+            ToiletVizOpened = false;
+            SetSpillVizibility();
+        }
+    }
+    public void SetSpillVizibility()
+    {
+        if (ToiletViz != null)
+        {
+            ToiletViz.SetActive(ToiletVizOpened);
+        }
     }
 }
