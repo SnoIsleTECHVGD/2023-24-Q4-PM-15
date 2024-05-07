@@ -7366,6 +7366,22 @@ PrefabInstance:
       propertyPath: m_text
       value: Sort Posters
       objectReference: {fileID: 0}
+    - target: {fileID: 4680240269647683417, guid: 8d4900f1e9d45d84ca88f17bd75a7208, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 68.6414
+      objectReference: {fileID: 0}
+    - target: {fileID: 4680240269647683417, guid: 8d4900f1e9d45d84ca88f17bd75a7208, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 38.611
+      objectReference: {fileID: 0}
+    - target: {fileID: 4680240269647683417, guid: 8d4900f1e9d45d84ca88f17bd75a7208, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -782.4734
+      objectReference: {fileID: 0}
+    - target: {fileID: 4680240269647683417, guid: 8d4900f1e9d45d84ca88f17bd75a7208, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 154.36
+      objectReference: {fileID: 0}
     - target: {fileID: 6010512353531646148, guid: 8d4900f1e9d45d84ca88f17bd75a7208, type: 3}
       propertyPath: m_Name
       value: TimerUI
@@ -9264,7 +9280,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c004098b524c0bb44a7b824a69952117, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  YUCK: {fileID: 8300000, guid: 9a4d166ae60b2714aa824e0152fa1632, type: 3}
   Toilet: {fileID: 778150991}
   unClogged: 0
   Counter: 0
@@ -17669,10 +17684,6 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: -0.029119015
       objectReference: {fileID: 0}
-    - target: {fileID: 2272749641462814029, guid: 06d273c3d1f36954f9e7831838641beb, type: 3}
-      propertyPath: CA
-      value: 
-      objectReference: {fileID: 8300000, guid: 0df6d270dd827c64fa8bf09bc525f70c, type: 3}
     - target: {fileID: 2272749641708673496, guid: 06d273c3d1f36954f9e7831838641beb, type: 3}
       propertyPath: m_Name
       value: Trash Puzzle
@@ -23106,7 +23117,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 183f8476b52b7b94b94fe6b0e91a6b04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SPLISH: {fileID: 8300000, guid: 48177b75d00c5f2439a2abd2d1596978, type: 3}
+  SPLISH: {fileID: 0}
   Water: {fileID: 1268074734}
   transparency: 1
   fullyTransparent: 0
