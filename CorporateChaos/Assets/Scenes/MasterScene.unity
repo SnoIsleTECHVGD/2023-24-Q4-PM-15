@@ -1850,6 +1850,7 @@ GameObject:
   - component: {fileID: 146061752}
   - component: {fileID: 146061755}
   - component: {fileID: 146061754}
+  - component: {fileID: 146061756}
   m_Layer: 0
   m_Name: WaterSpill
   m_TagString: Untagged
@@ -1946,6 +1947,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &146061756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 146061751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97245addf1716884eaf30693b8a3b0e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  showWhenTaskDone: 0
 --- !u!1 &170219859
 GameObject:
   m_ObjectHideFlags: 0
@@ -3958,6 +3972,7 @@ GameObject:
   - component: {fileID: 335476771}
   - component: {fileID: 335476773}
   - component: {fileID: 335476772}
+  - component: {fileID: 335476774}
   m_Layer: 0
   m_Name: WaterSpill (1)
   m_TagString: Untagged
@@ -4053,6 +4068,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &335476774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 335476770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97245addf1716884eaf30693b8a3b0e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  showWhenTaskDone: 0
 --- !u!1 &339029710
 GameObject:
   m_ObjectHideFlags: 0
@@ -26690,6 +26718,8 @@ MonoBehaviour:
   ShredPapers: {fileID: 2067309189}
   mainCamera: {fileID: 632493397}
   Congrats: {fileID: 632493403}
+  spill: {fileID: 146061756}
+  spillShadow: {fileID: 335476774}
 --- !u!1 &2051724298 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2272749641163641982, guid: 06d273c3d1f36954f9e7831838641beb, type: 3}
