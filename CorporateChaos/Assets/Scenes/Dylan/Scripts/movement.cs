@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class movement : MonoBehaviour
 {
-    public KeyCode left, right, up, down;
+    public KeyCode left, right, up, down, left2, right2, up2, down2;
     public float moveSpeed;
     float horizontalInput;
     float verticalInput;
@@ -40,7 +40,15 @@ public class movement : MonoBehaviour
         {
             GetComponent<Animator>().SetInteger("WalkDirection", 1);
         }
+        if (Input.GetKey(left2))
+        {
+            GetComponent<Animator>().SetInteger("WalkDirection", 1);
+        }
         if (Input.GetKey(right)) 
+        {
+            GetComponent<Animator>().SetInteger("WalkDirection", 1);
+        }
+        if (Input.GetKey(right2))
         {
             GetComponent<Animator>().SetInteger("WalkDirection", 1);
         }
@@ -48,7 +56,15 @@ public class movement : MonoBehaviour
         {
             GetComponent<Animator>().SetInteger("WalkDirection", 2);
         }
+        if (Input.GetKey(down2))
+        {
+            GetComponent<Animator>().SetInteger("WalkDirection", 2);
+        }
         if (Input.GetKey(up))
+        {
+            GetComponent<Animator>().SetInteger("WalkDirection", 3);
+        }
+        if (Input.GetKey(up2))
         {
             GetComponent<Animator>().SetInteger("WalkDirection", 3);
         }
