@@ -130,6 +130,12 @@ public class Chase : MonoBehaviour
 
     public GameObject selectTarget()
     {
+        if (targetInRoom != 3 && targetInRoom != 2.5f && GetComponent<RoomTracker>().isInRoom == 2.5f)
+        {
+            transform.position = isInRoom.GetComponent<RoomArea>().exitPointIncrease.transform.position;
+            return selectTarget();
+        }
+
         if (targetInRoom > this.GetComponent<RoomTracker>().isInRoom)
         {
             return isInRoom.GetComponent<RoomArea>().exitPointIncrease;
@@ -156,14 +162,6 @@ public class Chase : MonoBehaviour
         else if (targetInRoom == 2.5f && this.GetComponent<RoomTracker>().isInRoom == 3)
         {
             return isInRoom.GetComponent<RoomArea>().exitPointSpecial1;
-        }
-        else if (isInRoom.GetComponent<RoomArea>().roomNum == 2.5f && isStuck)
-        {
-            return stuck;
-        }
-        else if (Mathf.Abs(transform.position.x - stuck.transform.position.x) < 1 && Mathf.Abs(transform.position.y - stuck.transform.position.y) < 1)
-        {
-            return isInRoom.GetComponent<RoomArea>().exitPointIncrease;
         }
         else
         {
