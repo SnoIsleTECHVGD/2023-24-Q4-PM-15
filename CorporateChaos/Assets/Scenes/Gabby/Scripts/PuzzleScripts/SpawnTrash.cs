@@ -11,7 +11,6 @@ public class SpawnTrash : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        SFXmanager.instance.PlaySFX(CA, transform, 1f);
         InvokeRepeating("spawn", 0.5f, 1f);
     }
 
