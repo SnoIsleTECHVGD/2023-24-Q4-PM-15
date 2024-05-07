@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class MopPuzzleInnerWorkings : MonoBehaviour
 {
+    [SerializeField] private AudioClip SPLISH;
     Vector2 difference = Vector2.zero;
     public GameObject Water;
     public float transparency = 1f;
@@ -27,6 +28,7 @@ public class MopPuzzleInnerWorkings : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        SFXmanager.instance.PlaySFX(SPLISH, transform, 1f);
         //Water.GetComponent<Renderer>().enabled = false;
         if (collision.CompareTag("Water"))
         {

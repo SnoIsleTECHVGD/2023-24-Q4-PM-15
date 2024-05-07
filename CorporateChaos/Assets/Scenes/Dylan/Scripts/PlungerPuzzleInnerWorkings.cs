@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlungerPuzzleInnerWorkings : MonoBehaviour
 {
+    [SerializeField] private AudioClip YUCK;
     Vector2 difference = Vector2.zero;
     public GameObject Toilet;
     public bool unClogged = false;
@@ -32,6 +33,7 @@ public class PlungerPuzzleInnerWorkings : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
+        SFXmanager.instance.PlaySFX(YUCK, transform, 1f);
         //Water.GetComponent<Renderer>().enabled = false;
         if (collision.CompareTag("Toilet"))
         {

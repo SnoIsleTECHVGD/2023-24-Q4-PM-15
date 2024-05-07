@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ThisorThat : MonoBehaviour
 {
+    [SerializeField] private AudioClip popClean;
     public GameObject TaskPanel = null;
     public bool taskPanelOpened = false;
 
@@ -11,6 +12,7 @@ public class ThisorThat : MonoBehaviour
     {
         taskPanelOpened = !taskPanelOpened;
         SetTaskPanelVisibility();
+        SFXmanager.instance.PlaySFX(popClean, transform, 1f);
     }
     public void SetTaskPanelVisibility()
     {

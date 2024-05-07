@@ -8,12 +8,13 @@ using UnityEngine.UI;
 
 public class VendingMachine : MonoBehaviour
 {
+    [SerializeField] private AudioClip KICK;
     [SerializeField] public Animator animator;
     public void kicking()
     {
-   
-        
-            StartCoroutine(Size());
+        SFXmanager.instance.PlaySFX(KICK, transform, 1f);
+
+        StartCoroutine(Size());
 
             IncreaseKick();
 

@@ -556,6 +556,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3da0b5911ffbbf5418ef93d890535a76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  popClean: {fileID: 8300000, guid: 3410b37374a6a764c89de6fbbb8a92b2, type: 3}
   TaskPanel: {fileID: 487040985}
   taskPanelOpened: 0
 --- !u!114 &487040987
@@ -1498,7 +1499,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 45fc2144aadc94e49ba41ec9f0ecd545, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.6
   m_Pitch: 0.85
   Loop: 1
   Mute: 0

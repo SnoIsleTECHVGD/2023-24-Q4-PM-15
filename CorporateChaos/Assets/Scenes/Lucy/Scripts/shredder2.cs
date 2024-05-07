@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class shredder2 : MonoBehaviour
 {
+    [SerializeField] private AudioClip SHRED;
     Vector2 difference = Vector2.zero;
     public GameObject Paper;
     public float transparency = 1f;
@@ -21,6 +22,7 @@ public class shredder2 : MonoBehaviour
     {
         if (collision.CompareTag("Paper"))
         {
+            SFXmanager.instance.PlaySFX(SHRED, transform, 1f);
             collision.GetComponent<Image>().color = new Color(1, 1, 1, transparency = transparency - 1f);
             TransparencyCounter = TransparencyCounter + 1;
 
