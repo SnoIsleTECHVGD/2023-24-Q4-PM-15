@@ -135,8 +135,7 @@ public class Chase : MonoBehaviour
             transform.position = isInRoom.GetComponent<RoomArea>().exitPointIncrease.transform.position;
             return selectTarget();
         }
-
-        if (targetInRoom > this.GetComponent<RoomTracker>().isInRoom)
+        else if (targetInRoom > this.GetComponent<RoomTracker>().isInRoom)
         {
             return isInRoom.GetComponent<RoomArea>().exitPointIncrease;
         }
