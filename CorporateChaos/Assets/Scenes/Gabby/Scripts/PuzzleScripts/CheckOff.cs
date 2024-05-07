@@ -14,6 +14,9 @@ public class CheckOff : MonoBehaviour
 
     public GameObject mainCamera;
     public Victory Congrats;
+
+    public OverworldTaskVisual spill;
+    public OverworldTaskVisual spillShadow;
     void Start()
     {
         //taskList.GetComponent<TaskList>().checklist[taskNum] = true;
@@ -29,6 +32,8 @@ public class CheckOff : MonoBehaviour
         if (MopSpill.GetComponent<MopPuzzleInnerWorkings>().fullyTransparent)
         {
             checkTask(3);
+            spill.changeVisibility();
+            spillShadow.changeVisibility();
         }
           if (UnClogToilet.GetComponent<PlungerPuzzleInnerWorkings>().unClogged == true)
           {
