@@ -26820,7 +26820,7 @@ PrefabInstance:
       objectReference: {fileID: 797933702}
     - target: {fileID: 5114255111792747787, guid: 38cfa9d48eb9be34e865948965d2b3d9, type: 3}
       propertyPath: overworldObjects.Array.size
-      value: 9
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 5114255111792747787, guid: 38cfa9d48eb9be34e865948965d2b3d9, type: 3}
       propertyPath: overworldObjects.Array.data[0]
@@ -26858,6 +26858,26 @@ PrefabInstance:
       propertyPath: overworldObjects.Array.data[8]
       value: 
       objectReference: {fileID: 951143171}
+    - target: {fileID: 5114255111792747787, guid: 38cfa9d48eb9be34e865948965d2b3d9, type: 3}
+      propertyPath: overworldObjects.Array.data[9]
+      value: 
+      objectReference: {fileID: 1245356914}
+    - target: {fileID: 5114255111792747787, guid: 38cfa9d48eb9be34e865948965d2b3d9, type: 3}
+      propertyPath: overworldObjects.Array.data[10]
+      value: 
+      objectReference: {fileID: 577727157}
+    - target: {fileID: 5114255111792747787, guid: 38cfa9d48eb9be34e865948965d2b3d9, type: 3}
+      propertyPath: overworldObjects.Array.data[11]
+      value: 
+      objectReference: {fileID: 298923649}
+    - target: {fileID: 5114255111792747787, guid: 38cfa9d48eb9be34e865948965d2b3d9, type: 3}
+      propertyPath: overworldObjects.Array.data[12]
+      value: 
+      objectReference: {fileID: 538131108}
+    - target: {fileID: 5114255111792747787, guid: 38cfa9d48eb9be34e865948965d2b3d9, type: 3}
+      propertyPath: overworldObjects.Array.data[13]
+      value: 
+      objectReference: {fileID: 406716544}
     - target: {fileID: 5114255111792747788, guid: 38cfa9d48eb9be34e865948965d2b3d9, type: 3}
       propertyPath: m_Name
       value: Sort Posters
